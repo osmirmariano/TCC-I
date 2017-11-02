@@ -1,0 +1,115 @@
+% ----------------------------------------------------------------------------------------------------- %
+% Arquivo LaTeX de exemplo de TCC a ser apresentados à Ciência da Computação da UFT - Palmas
+% 
+% Versão 1.1:   Março 2016
+%
+% Criado por:   Tiago da Silva Almeida
+% Revisado por: Tiago da Silva Almeida
+%               Rafael Lima de Carvalho
+%               Ary Henrique Morais de Oliveira
+%
+% http://uftex.sourceforge.net 
+% ----------------------------------------------------------------------------------------------------- %
+
+\documentclass[tcc1]{uftex}
+
+\usepackage[num]{abntex2cite}                    % Citações padrão ABNT
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{}%
+
+\makelosymbols
+\makeloabbreviations
+
+\usepackage{tikz}                              
+\usepackage{verbatim}                      
+% Comando para escolha de pacote.
+\usepackage{amsmath}
+\usepackage[american]{circuitikz}
+\usepackage{amsmath,amssymb}
+\usepackage{multirow}
+\usepackage{listings}
+%\usepackage[table,xcdraw]{xcolor}
+
+
+\begin{document}
+  \title{Avaliação do aprendizado dos acadêmicos da disciplina de Álgebra Linear utilizando o \textit{software} AlfaGebra - módulos sistemas de equações lineares e espaço vetorial.}
+  \foreigntitle{Thesis Title}
+  \author{Osmir}{Custódio Mariano}
+  
+  \advisor{Profa.}{Hellena}{Christina Fernandes Apolinário}{D.Sc.}
+  \advisor{Prof.}{Edeilson}{Milhomem da Silva}{D.Sc.}
+  \examiner{Prof.}{Nome do Primeiro Examinador Sobrenome}{D.Sc.}
+  \examiner{Prof.}{Nome do Segundo Examinador Sobrenome}{Ph.D.}
+  \examiner{Prof.}{Nome do Terceiro Examinador Sobrenome}{D.Sc.}
+  \department{CC}
+  \date{12}{2017}
+
+  \keyword{Sistemas lineares}
+  \keyword{Espaço vetorial}
+  \keyword{Ensino e aprendizagem}
+  \keyword{Álgebra Linear}
+
+  \foreignkeyword{Linear systems}
+  \foreignkeyword{Vector space}
+  \foreignkeyword{Teaching and learning}
+  \foreignkeyword{Linear Algebra}
+
+  \maketitle
+
+ \frontmatter
+ \dedication{Dedico este trabalho aos meus pais, Orlando Mariano da Silva e Maria Gorete Ramos Custódio, que não mediram esforços para que eu chegasse até aqui.}
+
+  \begin{acknowledgement}
+  Gostaria de agradecer em primeira lugar a Deus por me conceder a oportunidade de chegar até aqui...
+  \end{acknowledgement}
+
+\begin{abstract}
+    O presente trabalho visa o desenvolvimento de uma plataforma de ensino e aprendizagem AlfaGebra para à disciplina de Álgebra Linear, sendo composta por três módulos: sistemas de equações lineares, espaços vetoriais e transformações lineares, ao qual este estudo abordará o desenvolvimento somente dos módulos de sistemas de equações lineares e espaço vetorial. Cada módulo apresentará conceitos teóricos, exercícios resolvidos e opção para que o usuário possa interagir com a plataforma e assim o sistema será capaz de realizar os cálculos e mostrar o passo a passo da resolução. O desenvolvimento da plataforma abordará a técnica de engenharia de \textit{software}, sendo composta por análise de requisitos, implementação, testes e implantação e será abordada a metodologia de desenvolvimento ágil \textit{Scrum} como procedimento para concretização dos requisitos. Desse modo, o sistema tem como objetivo auxiliar os acadêmicos da disciplina Álgebra Linear no aprendizado dos conteúdos e a partir da mesmo avaliar os discentes através da comparação de uma turma que utilizou a plataforma AlfaGebra e outra que não a utilizou. A avaliação será realizada com aplicação de questionários juntos aos acadêmicos, sendo um questionário aplicado junto a turna que não utilizou o sistema no decorrer do semestre 2017-1 e outro com a turma que utilizará o \textit{software} no decorrer do semestre 2017-2, para assim identificar se houve melhora no aprendizado dos discentes a partir do sistema.
+\end{abstract}
+  
+\begin{foreignabstract}
+    The present work aims at the development of an AlfaGebra teaching and learning platform for the discipline of Linear Algebra, being composed of three modules: systems of linear equations, vector spaces and linear transformations, to which this study will address the development of only the systems modules linear equations and vector space. Each module will present theoretical concepts, solved exercises and option so that the user can interact with the platform and thus the system will be able to perform the calculations and show step by step of the resolution. The development of the platform will approach the software engineering technique, consisting of requirements analysis, implementation, testing and deployment, and the agile Scrum development methodology will be approached as a procedure to fulfill the requirements. Thus, the system aims to help students of Algebra Linear in the learning of content and from the same evaluate the students by comparing a group that used the AlfaGebra platform and another that did not use it. The evaluation will be carried out with the application of questionnaires together with the academics, being a questionnaire applied at the turn that did not use the system in the course of the 2017-1 semester and another with the class that will use the software during the 2017-2 semester. identify if there was improvement in the students' learning from the system.
+\end{foreignabstract}
+
+
+\printlosymbols  
+\printloabbreviations
+\listoffigures            
+\listoftables 
+\tableofcontents 
+
+\mainmatter
+\renewcommand{\baselinestretch}{1.50}\normalsize
+
+% ----------------------------------------------------------------------------------------------------- %
+% Capítulos do trabalho
+% ----------------------------------------------------------------------------------------------------- %
+
+\input{./chapters/introducao}
+\input{./chapters/algebra_uft}
+\input{./chapters/fund_teorica}
+\input{./chapters/trabalhos_relac}
+\input{./chapters/metodologia}
+\input{./chapters/resultados}
+\input{./chapters/conclusao}
+
+\backmatter 
+\singlespacing   
+% ----------------------------------------------------------------------------------------------------- %
+% Bibliografia
+% ----------------------------------------------------------------------------------------------------- %
+
+\bibliography{tcc_1}
+
+% ----------------------------------------------------------------------------------------------------- %
+% Anexos
+% ----------------------------------------------------------------------------------------------------- %
+\appendix
+\input{./chapters/apendice}
+\input{./chapters/anexo}
+\onehalfspacing
+
+
+\end{document}
+
+

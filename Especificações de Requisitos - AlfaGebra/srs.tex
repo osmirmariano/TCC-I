@@ -1,0 +1,194 @@
+
+\documentclass{scrreprt}
+\usepackage{listings}
+\usepackage{underscore}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[portuges]{babel}
+\hypersetup{
+    bookmarks=false,    % show bookmarks bar?
+    pdftitle={Especificação de Requisitos de Software},    % title
+    pdfauthor={Osmir Mariano},                     % author
+    pdfsubject={TeX and LaTeX},                        % subject of the document
+    pdfkeywords={TeX, LaTeX, graphics, images}, % list of keywords
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=blue,       % color of internal links
+    citecolor=black,       % color of links to bibliography
+    filecolor=black,        % color of file links
+    urlcolor=purple,        % color of external links
+    linktoc=page            % only page is linked
+}%
+\def\myversion{1.0 }
+\date{}
+%\title{%
+
+%}
+\usepackage{hyperref}
+\begin{document}
+
+\begin{flushright}
+    \rule{16cm}{5pt}\vskip1cm
+    \begin{bfseries}
+        \Huge{Especificação de Requisitos\\ de \textit{Software}}\\ 
+        \vspace{1.9cm}
+        \\
+        \vspace{1.9cm}
+        AlfaGebra\\
+        \vspace{1.9cm}
+        \LARGE{Versão \myversion Desenvolvimento}\\
+        \vspace{1.9cm}
+        Preparado por Osmir Custódio Mariano e Jhonatan Santiango\\
+        \vspace{1.9cm}
+        Universidade Federal do Tocantins\\
+        \vspace{1.9cm}
+        \today\\
+    \end{bfseries}
+\end{flushright}
+
+\tableofcontents
+
+
+\chapter*{Histórico de Revisões}
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+	    Nome & Data & Descrição das alterações & Versão\\
+        \hline
+	    Osmir Mariano e Jhonatan Santiago & 01/08/2017 & Levantamento de Requisitos & V1.0\\
+        \hline
+    \end{tabular}
+\end{center}
+
+\chapter{Introdução}
+
+\section{Objetivos deste documento}
+Este documento tem por objetivo apresentar todas as informações técnicas e funcionais sobre o sistema de cálculos de álgebra linear o AlfaGebra. O software visa auxiliar os acadêmicos dos cursos de Ciência da Computação, Matemática e Engenharias. Ao longo deste documento serão apresentadas informações pertinentes sobre a concepção do projeto, definições dos requisitos funcionais e não funcionais e interface homem-computador.
+
+\section{Público Alvo}
+O principal público alvo do sistema serão os acadêmicos dos cursos de Ciência da Computação, Matemática e Engenharias (Civil, Alimentos, Elétrica e Ambiental). Ao qual será um sistema que apresentará recursos e conteúdo da área que venha auxiliar no aprendizado dos acadêmicos.
+
+\section{Escopo do produto}
+\subsection{Nome do produto e de seus componentes principais}
+
+
+\section{Descrição do produto}
+AlfaGebra é um sistema de cálculo de álgebra linear que visa auxiliar os alunos da Universidade Federal do Tocantins, inicialmente, no aprendizado, em virtude dessa disciplina apresentar um índice de reprovações elevadas. A Universidade Federal do Tocantins atualmente conta com um total de 00 alunos que apresentam a disciplina de álgebra linear em sua grade.
+\section{Missão do produto}
+\section{Referências}
+
+
+\chapter{Descrição Geral}
+O sistema AlfaGebra, principal fator deste documento, apresenta como objetivo auxiliar os acadêmicos dos cursos de graduação da Universidade Federal do Tocantins que apresentam a disciplina de álgebra linear em suas grades, visto que a disciplina apresenta índices de reprovações elevadas. Com o objetivo de minimizar esses índices, o projeto propõe disponibilizar um software em versão para desktop para o sistema operacional Windows.
+
+\section{Perspectiva do Produto}
+A Universidade Federal do Tocantins apresenta atualmente, segundo a PROGRAD, em seu quadro de acadêmicos, cerca (Não sei quantos mil) e com aproximadamente (quantidades de alunos) de alunos por semestre que fazem a disciplina álgebra linear...
+
+\section{Função do Produto}
+O AlfaGebra deve auxiliar os acadêmicos das áreas de exatas no aprendizado dos conteúdos da disciplina de álgebra linear, deste modo, tentando minimizar os índices de reprovações nos cursos...
+
+\section{Características de Classes de Usuário}
+O objetivo inicial para o desenvolvimento do AlfaGebra é voltado para os acadêmicos da Universidade Federal do Tocantins, mas espera que o sistema atinja mais acadêmicos da das universidades do país...
+
+\section{Ambiente Operacional}
+O ambiente operacional utilizado para o desenvolvimento e implementação do software, será utilizado ferramentas de código aberto como...
+
+\section{Design e Restrições de Implementação}
+
+\section{Documentação do Usuário}
+
+
+\chapter{Requisitos específicos}
+
+\section{Identificação dos requisitos}
+
+Por convenção e para facilitar a identificação dos requisitos, a referência é feita de acordo com o esquema abaixo:
+\begin{center}
+    \textbf{Identificador = [Siglas da Subseção primeira letra $\mid$  Numeração em ordem crescente]}
+\end{center}
+
+\section{Prioridades dos requisitos}
+Para estabelecer a prioridade dos requisitos, foram adotadas as denominações: essencial, importante e desejável. Na tabela 1 segue a descrição do significado de cada uma dessas denominações.
+
+\begin{table}[!htb]
+    \centering
+    \caption{Descrição das prioridades dos requisitos}
+    \label{descricao_prioridades_requisitos}
+    \begin{tabular}{|c|l|}
+    \hline
+    \textbf{Prioridade} & \multicolumn{1}{c|}{\textbf{Descrição}}       \\ \hline
+Essencial & \begin{tabular}[c]{@{}l@{}}Estes são requisitos sem o qual o,sistema não entra em funcionamento. \\ Esses requisitos são essenciais e tem que,ser implementados \\ impreterivelmente.\end{tabular}              \\ \hline
+Importante & \begin{tabular}[c]{@{}l@{}}Estes são requisitos sem o qual o sistema entra em funcionamento, \\ mas de forma não satisfatória. Esses requisitos devem ser implementados, \\ mas se  não forem, poderá ser utilizado.\end{tabular} 
+    \\ \hline
+Desejável & \begin{tabular}[c]{@{}l@{}}Estes são os requisitos que não compromete as funcionalidades básicas\\  do sistema, ou seja, o sistema pode funcionar de forma satisfatória\\ sem ele.\end{tabular}                 \\ \hline
+    \end{tabular}
+\end{table}
+
+\section{Descrição dos requisitos}
+\subsection{Requisitos Funcionais}
+\subsubsection{[RF01] Versão Desktop}
+O sistema deve ser desenvolvido em versão para Desktop. Sendo composto por três módulos: Sistemas de Equações Lineares; Espaço Vetorial; e Transformações Lineares.
+\subsubsection{Prioridade}
+Essencial
+
+\subsubsection{[RF02] Cálculo matriz linha reduzida}
+O sistema deve permitir que o usuário entre com expressões matemáticas para realizar o cálculo da matriz linha reduzida à forma escada. Usando para resolução das três operações elementares. Permutação da i-ésima e j-ésima linhas (Li $\rightarrow$ Lj); multiplicação da i-ésima linha por um escalar não nulo k (Li $\rightarrow$ k*Lj); e substituição de i-ésima linha pela i-ésima linha mais k vezes a j-ésima linha (Li \rightarrow Lj + K*Lj).
+\subsubsection{Prioridade}
+Essencial
+
+\subsubsection{[RF03] Demonstrar se satisfaz ou não a forma escada}
+O sistema deve mostrar para o usuário, quando não satisfeito a matriz linha reduzida à forma escada, as operações que não abrangem, bem como também, mostrar que é forma escada e seus respectivos resultados.
+\subsubsection{Prioridade}
+Importante
+
+\subsubsection{[RF04] Cálculo método de Gauss}
+O sistema deve ser capaz de realizar cálculos utilizando o método de Gauss.
+\subsubsection{Prioridade}
+Essencial
+
+\subsubsection{[RF05] Entrada de expressões}
+O sistema deve possuir um campo para entrada de expressões para que o usuário entre e assim o sistema realize o cálculo.
+\subsubsection{Prioridade}
+Essencial
+
+\subsubsection{[RF06] Classificação de sistema}
+O sistema deve ser capaz de classificar um sistema em: uma única solução; qualquer número real terá solução; e não existe solução.
+\subsubsection{Prioridade}
+Importante
+
+\subsubsection{[RF07] Apresentação gráfica}
+O sistema para cálculos de classificação de sistema, deve mostrar além do resultado um gráfico de tal situação do cálculo.
+\subsubsection{Prioridade}
+Importante
+
+\subsubsection{[RF08] Apresentação de forma passo a passo}
+O sistema deve mostrar o resultado e todo o passo-a-passo que gerou o resultado.
+\subsubsection{Prioridade}
+Importante
+
+\subsection{Requisitos não funcionais}
+
+\subsubsection{Usabilidade}
+[RNF09] O sistema será desenvolvido para que o usuário utilize com facilidade e praticidade, através de uma interface agradável, textos bem visíveis e uma fácil navegação através de abas para separar e organizar as sessões (módulos). 
+
+\subsubsection{Desempenho}
+[RNF10] O sistema apresentará um tempo limite para processamento dos cálculos. Para tal é necessário que a máquina do usuário tenha pelo menos as configurações de 2GB de memória RAM, 1 processador de dois núcleos. Sendo que de acordo com as configurações que vai ser estabelecido o tempo de processamento dos cálculos.
+
+\subsubsection{Disponibilidade}
+[RNF11] O sistema estará a todo tempo disponível para o usuário, desde que o mesmo o tenha instalado em seu ambiente de estudo (Computador).
+
+\subsubsection{Acessibilidade}
+[RNF12] A interface do sistema com o usuário final deve ser adequada a adaptações e personalizações que permitam sua utilização por usuários com necessidades especiais. Essas opções devem ser compatíveis com software especializados que possam vir a ser acoplado, bem como seguir orientações específicas de acessibilidade de interface.
+
+\subsubsection{Compatibilidade}
+[RNF13] O sistema, por se tratar de um software para desktop em arquitetura cliente/servidor, deverá rodar nos sistemas operacionais Windows e Linux. Para o Linux a variante utilizada é o Ubuntu a partir da versão 14.10, para o Windows utiliza-se versões a partir do XP (XP, Vista, 7, 8 e 10). O comportamento deve ser o mesmo, tanto no que se refere às funcionalidades quanto à instalação.
+
+\subsection{Requisitos de licença}
+[RL14] O sistema de ensino-aprendizagem em álgebra linear deverá ser distribuído sob a licença GNU General Public License (Licença Pública Geral), devendo ser asseguradas às liberdades de uso, acesso ao código fonte e distribuição.
+
+\section{Requisitos de Interface Externa}
+\subsection{Interface para usuário}
+\subsection{Interface de Hardware}
+\subsection{Interface de Software}
+
+\end{document}
