@@ -384,18 +384,57 @@ Observando o resultado obtido percebe-se que a ordenada é o dobro da abscissa.
 Como as duas condições são satisfeitas, então o conjunto é um subespaço vetorial.
 
 
-\subsection{Computação simbólica}
+\section{Computação simbólica}
 \noindent A computação simbólica ou como é conhecida também, computação algébrica, é uma área da computação que trata do estudo e desenvolvimento de algoritmos para manipulação de expressões matemáticas e outros objetos matemáticos. Campos \cite{2015:Lidio} define a computação simbólica como:
 \begin{quote}
     um interessante recurso de programação de alto nível, que integra os paradigmas de programação procedural, programação funcional e programação baseada em regras, que permite aos programadores especialistas produzirem aplicações que sistematicamente trabalham o desenvolvimento de Cálculo analítico avançado (p. 4).  
 \end{quote}
-A computação simbólica é bastante utilizada na matemática para o desenho de fórmulas que são utilizadas em programas numéricos e esse recurso que ele possibilita ajuda a simplificar as tarefas dos usuários ao realizarem cálculos manualmente.
+
+A computação apresenta limitação  no que tange a capacidade de armazenamento de dados, sua capacidade é limitada, em virtude disto os arredondamentos são aplicados e acabam afetando a precisão da resposta esperada. Mas, a computação simbólica apresenta uma diferencial, pois os dados são armazenados como frações e manipulados algebricamente, o que ocasiona a precisão da resposta total.
+
+A computação simbólica é bastante utilizada na matemática para o desenho de fórmulas que são utilizadas em programas numéricos e esse recurso ajuda a simplificar as tarefas dos usuários ao realizarem cálculos manualmente. Objetiva-se o desenvolvimento do AlfaGebra aplicando os recursos da computação simbólica, pois esse ramo da ciência da computação e da matemática centraliza no estudo de problemas relacionados a objetos não numéricos que podem ser tratados pelo computador, tais como fatoração de polinômios, equações algébricas e equações diferencias, limites, derivadas, integral e operações com matrizes.
+
+\section{\textit{Softwares} matemáticos com abordagem em Álgebra Linear}
+\noindent Nesta seção estão apresentados alguns \textit{softwares} com abordagem em Álgebra Linear para resolução de problemas.
+
+\subsection{Matlab}
+\noindent Matlab\footnote[1]{Matlab \url{https://www.mathworks.com/products/matlab.html}} é um \textit{software} poderosos, ``conhecido mundialmente como uma excelente ferramenta para soluções de problemas matemáticos, científicos e tecnológicos, que possui comandos muito próximos da forma como são escritas as expressões matemáticas"  (\cite{2005:Marcello}, 2005, p. 2). Sua aplicação é usada para resolução de problemas em diversas áreas, tais como: processamento de imagens, animação, aprendizagem profunda, visão computacional, robótica, etc. \cite{2004:Wu}. Trata-se de um \textit{software} interativo de alta performance voltado para o cálculo numérico, desenvolvido no final dos anos de 1970 pelo o presidente do departamento de ciência da computação da Universidade do Novo México, Cleve Moler.
+
+Uma das principais características presente no Matlab é a sua extensibilidade, que permite que vários contribuintes interajam  para o enriquecimento do sistema, tais como engenheiros, programadores, matemáticos cientistas, entre outros \cite{2005:Marcello}. O sistema aborda uma parte específica para a resolução de problemas voltados para a Álgebra Linear, como sistemas de equações lineares, espaços vetoriais, transformações lineares, entre outros conteúdos e tais recursos facilitam no processo de resolução de problemas.
+
+\subsection{Wolfram Alpha}
+\noindent Wolfram Alpha\footnote[2]{Wolfram Alpha \url{https://www.wolfram.com/}} é uma plataforma de conhecimento computacional desenvolvido pela Wolfram Research e é uma plataforma de serviços \textit{online} que responde às perguntas diretamente, mediante o processamento da resposta extraída de base de dados estruturado. O presente sistema realiza cálculos em diversas áreas como cálculo diferencial, processamento de imagens, finanças, Álgebra Linear, entre outros. Através do mesmo é possível obter a resolução problemas mostrando toda a descrição da resolução da expressão.
+
+Na Álgebra Linear, alguns assuntos são abordados para a resolução de problemas, tais como operações com matrizes, sistemas de equações lineares, matrizes de transformações, espaços vetoriais, etc. É importante ressaltar que não são todos os tópicos de sistemas de equações lineares, espaço vetorial e transformações lineares que estão presente na plataforma. 
+
+\subsection{Maple}
+\noindent Maple\footnote[3]{Maple \url{https://www.maplesoft.com/}} é \textit{software} computacional específico para resolução de problemas matemáticos e constitui um ambiente computacional para o trabalho com expressões algébricas, simbólica e permite a geração de gráficos em até três dimensões. Seu desenvolvimento começou na Universidade de Waterloo no Canadá em 1981, mas em 1988 a empresa Maplesoft começou a desenvolver novas funcionalidades e a comercializá-lo. 
+
+Com o Maple é possível resolver problemas de diversas áreas, entre elas a Álgebra Linear com a resolução de problemas ligados a sistemas de equações lineares, espaço vetorial, transformações lineares, entre muitos outros tópicos.
+
+\section{Formalismo de linguagens}
+\noindent De um modo geral, linguagens formais consiste em modelos matemáticos que permite especificar e reconhecer linguagens, suas estruturas, propriedades e classificações. Em ciência da computação apresenta diversas aplicações tais como modelagem de sistemas, compiladores, processamento de linguagens, reconhecimento de padrões, item este que será de grande importância para o desenvolvimento da plataforma AlfaGebra, pois através do mesmo será possível verificar as expressões inseridas para o processamento do resultado. Contudo, para um melhor entendimento é necessário introduzir os conceitos de alfabeto e palavra.
+
+De acordo com Hopcroft \cite{2002:John}, um alfabeto é um conjunto de símbolos finito e não-vazio e palavra é uma sequência finita de símbolos de um alfabeto, e a partir de um conjunto palavras que são originadas as linguagens.
+
+\subsection{Expressões Regulares}
+\noindent Expressões regulares é um notação para definição de padrões para linguagens, sua funcionalidade é para validar entradas de dados, ou seja, é um formalismo denotacional, considerado gerador, o qual é definido a partir de conjuntos de linguagens básicas e de operação de concatenação e de união.
+
+As expressões regulares são utilizadas para construção de muitos \textit{softwares}, por exemplo, compiladores, editores, sistemas operacionais, protocolos, entre outras aplicações e elas são a maneira mais compacta e simples de descrever conjuntos regulares.
+
+\subsection{Autômato Finito}
+\noindent Autômato Finito consiste de um formalismo operacional ou reconhecedor, sendo um sistema de estados finitos, ou seja, é uma máquina de estados finito que aceita ou rejeita palavras. De acordo com \cite{2002:John}, 
+\begin{quote}
+    os autômatos finitos envolvem estados e transições entre estados em reposta a entradas. Eles são úteis na elaboração de vários tipos diferentes de \textit{software}, inclusive o componentes léxica de um compilador e sistemas para verificar correção de circuitos ou protocolos (p. 36).
+\end{quote}
+
+Assim como as expressões regulares os autômatos finitos propicia a formalização das linguagens regulares. Contudo, os autômatos finitos são dispositivos de aceitação de sentenças e constituem um caso particular do modelo geral de reconhecedores.
 
 \section{Metodologia de Desenvolvimento Ágil}
 \noindent Um ponto importante das metodologias ágeis é que elas são adaptativas, ou seja, elas podem ser adaptadas no decorrer do desenvolvimento de \textit{software} a novos fatores, o que é diferente das metodologias clássicas, a qual pode acontecer de no decorrer do desenvolvimento de um \textit{software} realizar todas as etapas necessárias para sua concretização e depois verificar que elas não atendem mais ao propósito que foi implementado. Isso porque as regras podem ter mudado e para a realização das adaptações pode ter um custo alto, desse modo, não sendo proveitoso desenvolvê-las. Foi a partir dessa situação que a crise do \textit{software} começou a crescer, visto que os \textit{software} não satisfaziam os clientes ou empresas \cite{2005:rezende}.
 
 \subsection{Manifesto Ágil}
-\noindent O manifesto ágil teve seu surgimento em 2001 pelo engenheiro de \textit{software} Kenet Beck e mais 16 (dezesseis) desenvolvedores de sistemas de grande destaques na área, a qual batizaram de \textit{"Agile Alliance"} e assinaram um documento conhecido com \textit{"Manifesto para Desenvolvimento Ágil de \textit{Software}"} como registro dessa prática de desenvolvimento \cite{2001:Pressman}.
+\noindent O manifesto ágil teve seu surgimento em 2001 pelo engenheiro de \textit{software} Kenet Beck e mais 16 (dezesseis) desenvolvedores de sistemas de grande destaques na área, a qual batizaram de \textit{``Agile Alliance"} e assinaram um documento conhecido com \textit{``Manifesto para Desenvolvimento Ágil de \textit{Software}"} como registro dessa prática de desenvolvimento \cite{2001:Pressman}.
 
 Atualmente o processo de desenvolvimento de \textit{software} utilizando a metodologia ágil tem ganhado bastante espaços devido ao fato que Pereira \cite{2013:Pereira} relata:
 \begin{quote}
