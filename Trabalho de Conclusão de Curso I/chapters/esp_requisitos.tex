@@ -37,7 +37,7 @@
         \vspace{1.9cm}
         \LARGE{Versão \myversion Desenvolvimento}\\
         \vspace{1.9cm}
-        Preparado por Osmir Custódio Mariano e Jhonatan Santiango\\
+        Preparado por Osmir Custódio Mariano e Jhonatan Sousa Santiago\\
         \vspace{1.9cm}
         Universidade Federal do Tocantins\\
         \vspace{1.9cm}
@@ -60,26 +60,33 @@
     \end{tabular}
 \end{center}
 
-\chapter{Introdução}
+\chapter*{Introdução}
 
 \section{Objetivos deste documento}
-Este documento tem por objetivo apresentar todas as informações técnicas e funcionais sobre o sistema de cálculos de álgebra linear o AlfaGebra. O software visa auxiliar os acadêmicos dos cursos de Ciência da Computação, Matemática e Engenharias. Ao longo deste documento serão apresentadas informações pertinentes sobre a concepção do projeto, definições dos requisitos funcionais e não funcionais e interface homem-computador.
+Este documento tem por objetivo apresentar todas as informações técnicas e funcionais sobre o sistema de cálculos de Álgebra Linear o AlfaGebra. O \textit{software} visa auxiliar os acadêmicos dos cursos de Ciência da Computação, Matemática e Engenharias, mas inicialmente a proposta é somente para o curso de Ciência da Computação, depois será expandido para os demais cursos. Ao longo deste documento serão apresentadas informações pertinentes sobre a concepção do projeto, definições dos requisitos funcionais e não funcionais e interface homem-computador.
 
 \section{Público Alvo}
-O principal público alvo do sistema serão os acadêmicos dos cursos de Ciência da Computação, Matemática e Engenharias (Civil, Alimentos, Elétrica e Ambiental). Ao qual será um sistema que apresentará recursos e conteúdo da área que venha auxiliar no aprendizado dos acadêmicos.
+O principal público alvo do sistema serão os acadêmicos dos curso de Ciência da Computação em específicos os da disciplina de Álgebra Linear. Ao qual será um sistema que apresentará recursos e conteúdo da área para que venha auxiliar no aprendizado dos mesmos.
 
 \section{Escopo do produto}
-\subsection{Nome do produto e de seus componentes principais}
+O AlfaGebra é um \textit{software} matemático para resolução de problemas de Álgebra Linear, apresenta como objetivo auxiliar no aprendizado dos acadêmicos. O sistema por ser para o ensino e aprendizagem apresentará como requisitos uma parte voltada para os aspectos teóricos, exercícios resolvidos e opção para que o usuários forneça expressões e assim o sistema irá descrever todo o passo a passo da resolução do problema.
 
+\subsection{Nome do produto e de seus componentes principais}
+\begin{itemize}
+    \item \textbf{Produto: }AlfaGebra.
+    \item \textbf{Componentes principais: }Apresentação de conteúdos teóricos, exercícios resolvidos e opção para inserção de expressões para assim o sistema possa realizar o cálculo.
+\end{itemize}
 
 \section{Descrição do produto}
-AlfaGebra é um sistema de cálculo de álgebra linear que visa auxiliar os alunos da Universidade Federal do Tocantins, inicialmente, no aprendizado, em virtude dessa disciplina apresentar um índice de reprovações elevadas. A Universidade Federal do Tocantins atualmente conta com um total de 00 alunos que apresentam a disciplina de álgebra linear em sua grade.
-\section{Missão do produto}
-\section{Referências}
+AlfaGebra apresenta como objetivo auxiliar os alunos da Universidade Federal do Tocantins em específico o curso de Ciência da Computação da disciplina de Álgebra Linear, inicialmente, no aprendizado, em virtude dessa disciplina apresentar índices de evasões e reprovações elevadas. A Universidade Federal do Tocantins atualmente conta com aproximadamente de 180 alunos por semestre que cursam a disciplina de Álgebra Linear.
 
+\section{Referências}
+Pressman, Roger S. Engenharia de software: uma abordagem profissional. 7ª Edição." Ed: McGraw Hill (2011).\newline
+
+\noindent SOMMERVILLE, I.Engenharia de Software. 8. ed. [S.l.]:  Pearson Addison, 2007.
 
 \chapter{Descrição Geral}
-O sistema AlfaGebra, principal fator deste documento, apresenta como objetivo auxiliar os acadêmicos dos cursos de graduação da Universidade Federal do Tocantins que apresentam a disciplina de álgebra linear em suas grades, visto que a disciplina apresenta índices de reprovações elevadas. Com o objetivo de minimizar esses índices, o projeto propõe disponibilizar um software em versão para desktop para o sistema operacional Windows.
+O sistema AlfaGebra, principal fator deste documento, apresenta como objetivo auxiliar os acadêmicos dos cursos de graduação da Universidade Federal do Tocantins que apresentam a disciplina de álgebra linear em suas estrutura curricular, visto que a disciplina apresenta índices de reprovações elevadas. Com o objetivo de minimizar esses índices, o projeto propõe disponibilizar um software em versão para desktop para o sistema operacional Windows.
 
 \section{Perspectiva do Produto}
 A Universidade Federal do Tocantins apresenta atualmente, segundo a PROGRAD, em seu quadro de acadêmicos, cerca (Não sei quantos mil) e com aproximadamente (quantidades de alunos) de alunos por semestre que fazem a disciplina álgebra linear...
@@ -166,6 +173,47 @@ O sistema deve mostrar o resultado e todo o passo-a-passo que gerou o resultado.
 \subsubsection{Prioridade}
 Importante
 
+\subsubsection{[RF09] Matriz de uma transformação linear }
+O sistema deve ser capaz de representar a matriz de uma transformação linear
+\subsubsection{Prioridade}
+Essencial
+
+\subsubsection{[RF10] Núcleo de uma transformação linear }
+O sistema deve ser capaz de representar o núcleo de uma transformação linear
+\subsubsection{Prioridade}
+Essencial
+
+\subsubsection{[RF11] Imagem de uma transformação linear }
+O sistema deve ser capaz de representar a imagem de uma transformação linear
+\subsubsection{Prioridade}
+Essencial
+
+\subsubsection{[RF12]  Operações com transformações lineares}
+O sistema deve fazer cálculos com operações de transformações lineares, operações do tipo adição, multiplicação por escalar, etc.
+\subsubsection{Prioridade}
+Essencial
+
+\subsubsection{[RF13] Calcular Dilatações ou Contrações }
+O sistema deve realizar dilatações ou contrações em transformações lineares
+\subsubsection{Prioridade}
+Essencial
+
+\subsubsection{[RF14] Calcular Reflexões}
+O sistema deve ser capaz de realizar operações de reflexões
+\subsubsection{Prioridade}
+Essencial
+
+\subsubsection{[RF15] Calcular Rotações }
+O sistema deve ser capaz de realizar operações de rotações
+\subsubsection{Prioridade}
+Essencial
+
+\subsubsection{[RF16] Calcular Cisalhamentos }
+O sistema deve realizar operações cisalhamentos
+\subsubsection{Prioridade}
+Essencial
+
+
 \subsection{Requisitos não funcionais}
 
 \subsubsection{Usabilidade}
@@ -181,7 +229,7 @@ Importante
 [RNF12] A interface do sistema com o usuário final deve ser adequada a adaptações e personalizações que permitam sua utilização por usuários com necessidades especiais. Essas opções devem ser compatíveis com software especializados que possam vir a ser acoplado, bem como seguir orientações específicas de acessibilidade de interface.
 
 \subsubsection{Compatibilidade}
-[RNF13] O sistema, por se tratar de um software para desktop em arquitetura cliente/servidor, deverá rodar nos sistemas operacionais Windows e Linux. Para o Linux a variante utilizada é o Ubuntu a partir da versão 14.10, para o Windows utiliza-se versões a partir do XP (XP, Vista, 7, 8 e 10). O comportamento deve ser o mesmo, tanto no que se refere às funcionalidades quanto à instalação.
+[RNF13] O sistema, por se tratar de um software para desktop, deverá rodar nos sistemas operacionais Windows e Linux. Para o Linux a variante utilizada é o Ubuntu a partir da versão 14.10, para o Windows utiliza-se versões a partir do XP (XP, Vista, 7, 8 e 10). O comportamento deve ser o mesmo, tanto no que se refere às funcionalidades quanto à instalação.
 
 \subsection{Requisitos de licença}
 [RL14] O sistema de ensino-aprendizagem em álgebra linear deverá ser distribuído sob a licença GNU General Public License (Licença Pública Geral), devendo ser asseguradas às liberdades de uso, acesso ao código fonte e distribuição.

@@ -4,13 +4,13 @@
 \chapter{Fundamentação Teórica}
 \label{cap:teoria}
 
-\noindent Ao longo desse capítulo serão expostos conceitos básicos que são de grande importância para o entendimento desse trabalho e dentre eles serão destacados a definição de matriz e uma explanação sobre as principais utilizadas no estudo da Álgebra Linear, sistemas de equações lineares que são uns dos conteúdos que farão parte da plataforma de ensino e aprendizagem AlfaGebra, espaço vetorial que também compõe o AlfaGebra, abordagem sobre engenharia de \textit{software} a fim de explanar como consiste o desenvolvimento de um sistema, e para um desenvolvimento mais enxuto a utilização da metodologia ágil \textit{Scrum} que será aplicada no desenvolvimento do \textit{software} AlfaGebra e assim entender seu funcionamento. E por fim, uma abordagem sobre avaliação do ensino e aprendizagem.
+\noindent Ao longo desse capítulo estão expostos conceitos básicos que são de grande importância para o entendimento deste trabalho e dentre eles serão destacados: definição de matriz, principais matrizes utilizadas no estudo da Álgebra Linear, sistemas de equações lineares, conteúdo este que fará parte da plataforma de ensino e aprendizagem AlfaGebra, espaço vetorial que também irá compor o AlfaGebra. Também uma abordagem sobre engenharia de \textit{software} a fim de explanar como consiste o desenvolvimento de um sistema, e para um desenvolvimento mais organizado a utilização da metodologia ágil, em especial o \textit{framework Scrum} será aplicada no desenvolvimento do \textit{software} AlfaGebra. E para a implementação da plataforma de ensino e aprendizagem AlfaGebra será aplicado a computação simbólica como recursos para o tratamento das expressões que será fornecidas pelos os usuários e outros aplicações. Será discutido também uma abordagem do \textit{software} Matlab como ferramenta de aprendizagem e resolução de problemas e por fim, uma abordagem sobre avaliação do ensino e aprendizagem.
 
 \section{Matrizes}
 \noindent Um das ferramentas mais poderosas consideradas na matemática são as matrizes, pois as mesmas tem aplicações em diversas áreas, tais como em codificação e decodificação de mensagens, computação gráfica, engenharias, etc. Desse modo, faz-se necessário a compreensão de algumas propriedades e nomenclaturas em relação as mesmas.
 
 \subsection{Definição de matriz}
-\noindent Matrizes são objetos matemáticos estruturados em um quadrado composto por linhas e colunas. A definição de Steinbruch \cite{1987:Steinbruch} é similar a citada, onde uma matriz é um quadrado $m x n$ de elementos, e que estes podem ser números, polinômios, funções, etc., que estão dispostos em $m$ linhas e $n$ colunas, representada por  $A{}_{mxn}$.\\
+\noindent Matrizes são objetos matemáticos estruturados em tabelas disposta em $m$ linhas e $n$ colunas. A definição de Steinbruch \cite{1987:Steinbruch} é similar a citada, onde uma matriz é uma tabela $m x n$ de elementos, e que estes podem ser números, polinômios, funções, etc., que estão dispostos em $m$ linhas e $n$ colunas, representada por  $A{}_{mxn}$.\\
 
 \begin{center}
     $A = 
@@ -50,7 +50,7 @@ Observando a matriz $A$, percebe-se que o número de linhas e colunas são iguai
     $A = 
     \begin{bmatrix}
         a_{1} & a_{2} & a_{3} & \ldots & a_{n}
-    \end{bmatrix}_{n x 1}$
+    \end{bmatrix}_{1 x n}$
 \end{center}
 
 \subsubsection{Matriz Coluna}
@@ -65,11 +65,11 @@ Observando a matriz $A$, percebe-se que o número de linhas e colunas são iguai
         a_{3} \\
         \vdots \\
         a_{n} 
-    \end{bmatrix}_{1 x n}$
+    \end{bmatrix}_{n x 1}$
 \end{center}
 
 \subsubsection{Matriz Nula}
-\noindent A matriz cujos elementos $a{}_{mn}$ são todos nulos.
+\noindent A matriz cujos elementos $A{}_{ij}$ são todos nulos.
 
 \textit{Exemplo:}
 \begin{center}
@@ -81,7 +81,7 @@ Observando a matriz $A$, percebe-se que o número de linhas e colunas são iguai
 \end{center}
 
 \subsubsection{Matriz Diagonal}
-\noindent É uma matriz quadrada em que os elementos que não pertencem a diagonal principal são todos nulos, denotada por $A{}_{mn} = 0$, para $m \neq n$.
+\noindent É uma matriz quadrada $A = \begin{bmatrix} a_{}_{ij} \end{bmatrix}$ em que os elementos que não pertencem a diagonal principal são todos nulos, denotada por $A{}_{ij} = 0$, para $i \neq j$.
 
 \textit{Exemplo:}
 \begin{center}
@@ -94,7 +94,7 @@ Observando a matriz $A$, percebe-se que o número de linhas e colunas são iguai
 \end{center}
 
 \subsubsection{Matriz Identidade}
-\noindent A matriz escalar de qualquer ordem que tem todos os elementos da diagonal principal $a{}_{mm} = 1$ e $a_{mn} = 0$, para todo $m \neq n$. Representada com $I{}_{n}$, ou simplesmente por $I$ é chamada de matriz identidade.
+\noindent A matriz escalar de qualquer ordem, que tem todos os elementos da diagonal principal $A{}_{ij} = 1$, para todo $i \neq j$. Representada com $I{}_{n}$, ou simplesmente por $I$ é chamada de matriz identidade.
 
 \textit{Exemplo:}
 \begin{center}
@@ -114,7 +114,7 @@ Observando a matriz $A$, percebe-se que o número de linhas e colunas são iguai
 
 \textit{Exemplo:}
 \begin{center}
-    $5 x
+    $5 \cdot
     \begin{bmatrix}
         1 & 3 & 6 \\ 
         -4 & 2 & 0 \\ 
@@ -134,7 +134,7 @@ Observando a matriz $A$, percebe-se que o número de linhas e colunas são iguai
     \end{bmatrix}$
 \end{center}
 
-Em relação as propriedades da multiplicação de uma matriz por um escalar, para quaisquer matrizes $A$ e $B$ de mesma ordem e os escalares $\alpha$ e $\lambda$ reais a multiplicação por o escalar satisfaz as presentes propriedades:
+Em relação as propriedades da multiplicação de uma matriz por um escalar, para quaisquer matrizes $A$ e $B$ de mesma ordem e os escalares $\alpha$ e $\lambda$ $\in \mathbb{R}$, a multiplicação por o escalar satisfaz as presentes propriedades:
 \begin{enumerate}
     \item[i)] $(\alpha \lambda) A = \alpha(\lambda A)$
     \item[ii)] $(\alpha + \lambda) A = \alpha A + \lambda A$
@@ -143,7 +143,7 @@ Em relação as propriedades da multiplicação de uma matriz por um escalar, pa
 \end{enumerate}
  
 \subsubsection{Soma de matrizes}
-\noindent Dadas duas matrizes $A = (a{}_{mn})$ e $B = (b{}_{mn}) $ são matrizes $m x n$. Assim, a soma $A + B$ é a matriz $m x n$, cujos elementos $(m, n)$ é $(a{}_{mn}) + (b{}_{mn})$, para cada par ordenado $(m, n)$.
+\noindent Dadas duas matrizes  $A = \begin{bmatrix} a_{}_{ij} \end{bmatrix}$ e  $B = \begin{bmatrix} b_{}_{ij} \end{bmatrix}$ de ordem $(i, j)$. Assim, a soma $A + B$ é uma matriz  $C = \begin{bmatrix} c_{}_{ij} \end{bmatrix}$.
 
 \textit{Exemplo:}
 \begin{center}
@@ -152,7 +152,24 @@ Em relação as propriedades da multiplicação de uma matriz por um escalar, pa
         a{}_{11} & a{}_{12} & a{}_{13} \\ 
         a{}_{21} & a{}_{22} & a{}_{23} 
     \end{bmatrix}
-    + B =
+    $
+    e
+    $B =
+    \begin{bmatrix}
+        b{}_{11} & b{}_{12} & b{}_{13} \\ 
+        b{}_{21} & b{}_{22} & b{}_{23}
+    \end{bmatrix}$
+\end{center}
+
+então:
+
+\begin{center}
+    $
+    \begin{bmatrix}
+        a{}_{11} & a{}_{12} & a{}_{13} \\ 
+        a{}_{21} & a{}_{22} & a{}_{23} 
+    \end{bmatrix}
+    +
     \begin{bmatrix}
         b{}_{11} & b{}_{12} & b{}_{13} \\ 
         b{}_{21} & b{}_{22} & b{}_{23}
@@ -163,8 +180,7 @@ Em relação as propriedades da multiplicação de uma matriz por um escalar, pa
         a{}_{21} + b{}_{21} & a{}_{22} + b{}_{12} & a{}_{23} + b{}_{13}
     \end{bmatrix}$
 \end{center}
-
-Em relação às propriedades da adição de matrizes, para quaisquer matrizes $A, B$ e $C$ de mesma ordem $m x n$, existem as seguintes propriedades que a satisfazem:
+Em relação às propriedades da adição de matrizes, para quaisquer matrizes $A, B$ e $C$ de mesma ordem $i \times j$, existem as seguintes propriedades que a satisfazem:
 
 \begin{enumerate}
     \item[i)] $A + (B + C) = (A + B) + C$
@@ -174,15 +190,15 @@ Em relação às propriedades da adição de matrizes, para quaisquer matrizes $
 \end{enumerate}
 
 \subsubsection{Multiplicação de matrizes}
-\noindent Uma das operações mais importantes é a multiplicação entre matrizes. De acordo com Leon \cite{1998:Leon}, a motivação da definição a seguir de multiplicação entre matrizes vem de sua aplicação em sistemas lineares.
+\noindent Uma das operações mais importantes entre matrizes é a multiplicação. De acordo com Leon \cite{1998:Leon}, a motivação da definição de multiplicação entre matrizes vem de sua aplicação em sistemas lineares.
 
-A definição dada por Leon \cite{1998:Leon}, diz que, se $A = (a{}_{mn})$ é uma matriz $m x n$ e  $B = (b{}_{mn)$ é uma matriz $n x r$, assim o produto $AB = C = (c{}_{mn)$ é a matriz $m x r$ cujos elementos são definidos por 
+Boldrini \cite{1980:Boldrini} define: sejam $A = \begin{bmatrix} a_{}_{ij} \end{bmatrix}_{m \times n}$ e $B = \begin{bmatrix} b_{}_{rs}\end{bmatrix}_{n \times p}$. Assim defini-se $C = \begin{bmatrix} c_{}_{uv} \end{bmatrix}_{m \times p}$, onde
 
 \begin{center}
-    $c_{mnj} = \sum_{i}^{k=1}a_{mk}b_{kn}$
+    $c_{uv} = \sum_{k = 1}^{n} a_{uk}b_{kv} = a_{u1}b_{1v} + ... + a_{un}b_{nv}$
 \end{center}
 
-Desse modo, para formar o elemento $(m, n)$ do produto, pega-se a \textit{m-ésima} linha de $A$ e a \textit{n-ésima} coluna de $B$, e assim multiplicam-se os elementos correspondentes dois a dois e soma-se os números resultantes. Contudo, para que o produto $AB$ seja possível é necessário que exista se, e somente se, o número de colunas de $A$ seja igual ao número de linhas $B$.
+Desse modo, para formar o elemento $C_{ij}$ do produto, pega-se a \textit{i-ésima} linha de $A$ e a \textit{j-ésima} coluna de $B$, e assim multiplicam-se os elementos correspondentes dois a dois e soma-se os números resultantes. Contudo, para efetuar o produto entre duas matrizes $A_{m \times n}$ e $B_{l \times p}$, só é possível se o número de colunas da primeira for igual ao número de linhas da segunda, isto é, $n = 1$. Além disso, o resultado da matriz $C = A\cdot B$ será de ordem $m \times p$.
 
 \textit{Exemplo:}
 \begin{center}
@@ -222,7 +238,7 @@ então:
 \begin{center}
     $a_{1}x_{1} + a_{2}x_{2} + a_{3}x_{} + ... + a_{n}x_{n} = b$   
 \end{center}
-onde $a_{1}, a_{2}, ..., a_{n}$ são os coeficientes das variáveis, b o termo independente e $x_{1}, x_{2}, x_{3}, ..., x_{n}$ são variáveis.
+onde $a_{1}, a_{2}, ..., a_{n}$ são os coeficientes, $x_{1}, x_{2}, ..., x_{n}$ são incógnitas e b é o termo independente.
 
 \subsection{Sistemas de equações lineares}
 \noindent Um sistema de equações lineares refere-se a um conjunto de equações do tipo:\\
@@ -238,58 +254,58 @@ $\left\{\begin{matrix}
 \subsection{Operações Elementares}
 \noindent As operações elementares sobre as linhas de uma matriz são um total de três:
 \begin{itemize}
-    \item Permutação de duas equações $(Linha_{m} \rightarrow Linha_{n})$:\\
+    \item Permutação de duas linhas $(L_{i} \rightarrow L_{j})$:\\
     \textit{Exemplo:}\\
-    $Linha_{2} \rightarrow Linha_{3}$
+    $L_{2} \rightarrow L_{3}$
     $\begin{center}
         \begin{bmatrix}
-         a & b\\ 
-         c & d\\ 
-         e &  f
+         1 & 1\\ 
+         5 & 0\\ 
+         -3 & 4
         \end{bmatrix}
         \rightarrow 
         \begin{bmatrix}
-         a & b\\ 
-         e & f\\ 
-         c & d
+         1 & 1\\ 
+         -3 & 4\\ 
+         5 & 0
         \end{bmatrix}\\
     \end{center}$\\
 \end{itemize}
 
 \begin{itemize}
-    \item Multiplicação de uma equação por um escalar $k$ não nulo $(Linha_{m} \rightarrow k\cdot Linha_{n})$:\\
+    \item Multiplicação de uma linha por um escalar $k$, não nulo. $(L_{i} \rightarrow k\cdot L_{i})$:\\
     \textit{Exemplo:}\\
-    $Linha_{2} \rightarrow 2 \cdot Linha_{2}$
+    $L_{2} \rightarrow 2 \cdot L_{2}$
     $\begin{center}
         \begin{bmatrix}
-         a & b\\ 
-         c & d\\ 
-         e &  f
+         1 & 1\\ 
+         5 & 0\\ 
+         -3 & 4
         \end{bmatrix}
         \rightarrow 
         \begin{bmatrix}
-         a & b\\ 
-         2 \cdot c & 2 \cdot d\\ 
-         e & f
+         1 & 1\\ 
+         10 & 0\\ 
+         -3 & 4
         \end{bmatrix}\\
     \end{center}$\\
 \end{itemize}
 
 \begin{itemize}
-    \item Substituição de uma linha por sua soma com outra equação previamente multiplicada por um escalar $k$ não nulo $(Linha_{i} \rightarrow Linha_{m} + k \cdot Linha_{n})$:\\
+    \item Substituição de uma linha por sua soma com outra equação previamente multiplicada por um escalar $k$ não nulo $(L_{i} \rightarrow L_{i} + k \cdot L_{j})$:\\
     \textit{Exemplo:}\\
-    $Linha_{2} \rightarrow Linha_{2} + 2 \cdot Linha_{1}$
+    $L_{2} \rightarrow L_{2} + 2 \cdot L_{1}$
     $\begin{center}
         \begin{bmatrix}
-         a & b\\ 
-         c & d\\ 
-         e &  f
+         1 & 1\\ 
+         5 & 0\\ 
+         -3 & 4
         \end{bmatrix}
         \rightarrow 
         \begin{bmatrix}
-         a & b\\ 
-         c+2 \cdot a & d+2 \cdot b\\ 
-         e & f
+         1 & 1\\ 
+         7 & 2\\ 
+         -3 & 4
         \end{bmatrix}$\\
     \end{center}
 \end{itemize}
@@ -301,14 +317,14 @@ $\left\{\begin{matrix}
     \item O primeiro elemento de cada linha diferente de zero é igual a 1.
     \item Cada coluna que apresenta o primeiro elemento diferente de zero de alguma linha tem todos os demais elementos iguais a zero.
     \item Se existirem linhas com todos os elementos iguais a zero, elas ficam abaixo de todas as linhas não-nulas.
-    \item O número de zeros que preceda o primeiro elemento não nulo, aumenta a cada linha.
+    \item O número de zeros que precede o primeiro elemento não nulo, aumenta a cada linha.
 \end{enumerate}
 
 \subsubsection{Definição:}
-\noindent Dada uma matriz $A_{mxn}$, seja $B_{mxn}$ a matriz linha reduzida à forma escada de $A$. O posto de $A$, denotado por $P$ é a quantidade de linhas não nulas de $B$ e a nulidade de $A$ é o número $n-p$.
+\noindent Dada uma matriz $A_{m \times n}$, seja $B_{m \times n}$ a matriz linha reduzida à forma escada de $A$. O posto de $A$, denotado por $P$ é a quantidade de linhas não nulas de $B$ e a nulidade de $A$ é o número $n-p$.
 
 \subsection{Soluções de um sistema de equações lineares}
-\noindent Dentro da resolução de sistemas de equações lineares podem ocorrer diversas situações na resolução. Considerando um sistema ax = b existirão três possibilidades:
+\noindent Dentro da resolução de sistemas de equações lineares podem ocorrer diversas situações na resolução. Considerando um sistema de uma equação e um incógnita $ax = b$, existirão três possibilidades:
 \begin{enumerate}
     \item O sistema possui uma única solução. O sistema nesse caso é dito compatível e determinado ou sistema possível e determinado.
     \item Sistema possui infinitas soluções. O sistema é dito compatível e indeterminado ou sistema possível e indeterminados.
@@ -340,7 +356,7 @@ Abramo \cite{2016:Abramo} destaca que espaço vetorial está presente em zonas i
 \end{enumerate}
 
 \subsection{Subespaços Vetoriais}
-\noindent Em alguns casos é necessário descobrir dentro de um espaço vetorial $V$, subconjuntos $W$ que sejam eles próprios espaços vetoriais menores. Estes conjuntos são chamados de subespaços de $V$. Por exemplo, considerando $V = R^{2}$ o plano onde $W$ é uma reta deste plano, que passa pela origem.
+\noindent Em alguns casos é necessário descobrir dentro de um espaço vetorial $V$, subconjuntos $W$ que sejam eles próprios espaços vetoriais menores. Estes conjuntos são chamados de subespaços de $V$. Por exemplo, considerando $V = \mathbb{R}^{2}$ o plano onde $W$ é uma reta deste plano, que passa pela origem.
 
 \begin{figure}[!hb]
   \centering \includegraphics[dimensões]{Figuras/subespacos.png}
@@ -357,9 +373,9 @@ Abramo \cite{2016:Abramo} destaca que espaço vetorial está presente em zonas i
 \end{enumerate}
 
 \textit{Exemplo:}\\
-Nesse exemplo verifica-se se o conjunto $W = \left \{ (x, 2x) ; x \in \mathbb{R} \right \} \subset \mathbb{R}^2$ é um subespaço vetorial.
+Nesse exemplo verifica se o conjunto $W = \left \{ (x, 2x) ; x \in \mathbb{R} \right \} \subset \mathbb{R}^2$ é um subespaço vetorial.
 
-Inicialmente deve-se verificar se o vetor nulo está dentro do subespaço assim:
+Inicialmente deve-se verificar se o vetor nulo está incluso no subespaço, assim:
 \begin{center}
     $(0, 2\cdot0) = (0,0) \in W$    
 \end{center}
@@ -370,7 +386,7 @@ Como a verificação é válida, o vetor nulo encontra-se dentro do subespaço, 
 \begin{center}
     $u + v = (x_{1}, 2x_{1}) + (x_{2}, 2x_{2})$\\
     $u + v = (x_{1} + x_{2}, 2x_{1}) + 2x_{2})$\\
-    $u + v = (x_{1} + x_{2}, 2(x_{1} + x_{2}) \in W$\\
+    $u + v = (x_{1} + x_{2}, 2(x_{1} + x_{2})) \in W$\\
 \end{center}
 Observando o resultado obtido percebe-se que a ordenada é o dobro da abscissa.
 
@@ -385,64 +401,90 @@ Como as duas condições são satisfeitas, então o conjunto é um subespaço ve
 
 
 \section{Computação simbólica}
-\noindent A computação simbólica ou como é conhecida também, computação algébrica, é uma área da computação que trata do estudo e desenvolvimento de algoritmos para manipulação de expressões matemáticas e outros objetos matemáticos. Campos \cite{2015:Lidio} define a computação simbólica como:
+\noindent A computação apresenta limitação no que tange a capacidade de armazenamento de dados, em virtude disso, nas operações de cálculos, os arredondamentos são aplicados e acabam afetando a precisão da resposta esperada. Mas, a computação simbólica apresenta uma diferencial neste quesito, pois na computação simbólica os dados são armazenados como frações e manipulados algebricamente, o que ocasiona a precisão da resposta total. Destarte, ela é bastante utilizada na matemática para manipular formas simbólicas de expressões matemáticas e para realizar cálculos numéricos que são utilizados em \textit{softwares} numéricos.
+
+Assim, a computação simbólica é um ramo da Ciência da Computação e Matemática que estuda as operações simbólicas que são tratadas por um computador, ou seja, o desenvolvimento de algoritmos para manipulação de expressões matemáticas e outros objetos matemáticos \cite{2005:Leandro}.
+
+Em sistemas de computação simbólica, Bortolossi \cite{2012:Humberto} descreve que são
 \begin{quote}
-    um interessante recurso de programação de alto nível, que integra os paradigmas de programação procedural, programação funcional e programação baseada em regras, que permite aos programadores especialistas produzirem aplicações que sistematicamente trabalham o desenvolvimento de Cálculo analítico avançado (p. 4).  
+    \textit{softwares} matemáticos que permitem lidar com símbolos e obter respostas exatas para muitos problemas matemáticos, como a fatoração de números inteiros e polinômios, operações com matrizes, resolução de sistemas de equações lineares e não lineares, operações com números complexos, simplificações de expressões, cálculo de limites, derivadas e integrais, resolução de equações diferenciais, etc. (p. 1).
 \end{quote}
 
-A computação apresenta limitação  no que tange a capacidade de armazenamento de dados, sua capacidade é limitada, em virtude disto os arredondamentos são aplicados e acabam afetando a precisão da resposta esperada. Mas, a computação simbólica apresenta uma diferencial, pois os dados são armazenados como frações e manipulados algebricamente, o que ocasiona a precisão da resposta total.
+Já Campos \cite{2015:Lidio}, explana que é
+\begin{quote}
+    um interessante recurso de programação de alto nível, que integra os paradigmas de programação procedural, programação funcional e programação baseada em regras, que permite aos programadores especialistas produzirem aplicações que sistematicamente trabalham o desenvolvimento de cálculo analítico avançado (p. 4).  
+\end{quote}
 
-A computação simbólica é bastante utilizada na matemática para o desenho de fórmulas que são utilizadas em programas numéricos e esse recurso ajuda a simplificar as tarefas dos usuários ao realizarem cálculos manualmente. Objetiva-se o desenvolvimento do AlfaGebra aplicando os recursos da computação simbólica, pois esse ramo da ciência da computação e da matemática centraliza no estudo de problemas relacionados a objetos não numéricos que podem ser tratados pelo computador, tais como fatoração de polinômios, equações algébricas e equações diferencias, limites, derivadas, integral e operações com matrizes.
+Muitas aplicações na matemática, ciências e engenharias requerem operações simbólicas na resolução de operações, a partir disso, nas últimas décadas, no que tange o desenvolvimento de \textit{software} para matemática, foram desenvolvidos vários sistemas entre alguns deles o Mathematica, Maple, Matlab, Mupad, entre outros que permitem a manipulação simbólica de expressões matemáticas, e assim possibilitando resultados exatos e dentre estes \textit{softwares} os que mais recebem destaque são o Maple e Mathematica, devido a sua capacidade de resolução \cite{2007:Valesca}. É importante salientar que todos esses sistemas trabalham com os conteúdos da Álgebra Linear e por conseguinte, utilizam a computação simbólica para resolução dos problemas.
 
-\section{\textit{Softwares} matemáticos com abordagem em Álgebra Linear}
-\noindent Nesta seção estão apresentados alguns \textit{softwares} com abordagem em Álgebra Linear para resolução de problemas.
+\section{\textit{Software} matemático com abordagem em Álgebra Linear}
+\noindent Com o avanço das tecnologias muitos \textit{softwares} foram desenvolvidos com o propósito de auxiliar no aprendizado e na resoluções de problemas matemáticos, dentre alguns deles, o  Matlab\footnote[2]{Matlab \url{https://www.mathworks.com/products/matlab.html}} que é ambiente computacional para trabalho com expressões algébricas e simbólicas, o Maple\footnote[3]{Maple \url{https://www.maplesoft.com/}} também é outro \textit{software} computacional específico para resoluções de problemas matemáticos e constitui um ambiente computacional para o trabalho de expressões algébricas e simbólicas, outro é Mathematica\footnote[4]{Mathematica \url{https://www.wolfram.com/mathematica/}} que é um \textit{software} que trabalha com álgebra computacional e utiliza expressões algébricas e simbólicas para resolução, e foi desenvolvido pela Wolfram Research, entre alguns outros. Em virtude do Matlab ser um \textit{software} conhecido mundialmente e por ser uma ferramenta poderosa o mesmo será abordado com aspectos ligados à abordagem da Álgebra Linear.
 
 \subsection{Matlab}
-\noindent Matlab\footnote[1]{Matlab \url{https://www.mathworks.com/products/matlab.html}} é um \textit{software} poderosos, ``conhecido mundialmente como uma excelente ferramenta para soluções de problemas matemáticos, científicos e tecnológicos, que possui comandos muito próximos da forma como são escritas as expressões matemáticas"  (\cite{2005:Marcello}, 2005, p. 2). Sua aplicação é usada para resolução de problemas em diversas áreas, tais como: processamento de imagens, animação, aprendizagem profunda, visão computacional, robótica, etc. \cite{2004:Wu}. Trata-se de um \textit{software} interativo de alta performance voltado para o cálculo numérico, desenvolvido no final dos anos de 1970 pelo o presidente do departamento de ciência da computação da Universidade do Novo México, Cleve Moler.
+\noindent Matlab é um \textit{software} poderoso, ``conhecido mundialmente como uma excelente ferramenta para soluções de problemas matemáticos, científicos e tecnológicos, que possui comandos muito próximos da forma como são escritas as expressões matemáticas"  (\cite{2005:Marcello}, 2005, p. 2). Sua aplicação é usada para resoluções de problemas em diversas áreas, tais como: processamento de imagens, animação, aprendizagem profunda, visão computacional, robótica, etc. \cite{2004:Wu}. Trata-se de um \textit{software} interativo de alta performance voltado para o cálculo numérico, desenvolvido no final dos anos de 1970 pelo o presidente do departamento de ciência da computação da Universidade do Novo México, Cleve Moler\footnote[1]{Cleve Moler é PhD pela Universidade de Stanford em Matemática, presidente e cofundador da MathWorks. Moler é matemático e cientista da computação, trabalha com Álgebra Linear numérica e desenvolveu \textit{software} Matlab \cite{2016:Raquel}.} \cite{2016:Raquel}.
 
-Uma das principais características presente no Matlab é a sua extensibilidade, que permite que vários contribuintes interajam  para o enriquecimento do sistema, tais como engenheiros, programadores, matemáticos cientistas, entre outros \cite{2005:Marcello}. O sistema aborda uma parte específica para a resolução de problemas voltados para a Álgebra Linear, como sistemas de equações lineares, espaços vetoriais, transformações lineares, entre outros conteúdos e tais recursos facilitam no processo de resolução de problemas.
+Uma das principais características presente no Matlab é a sua extensibilidade, que permite que vários contribuintes interajam  para o enriquecimento do sistema, tais como engenheiros, programadores, matemáticos cientistas, entre outros \cite{2005:Marcello}. O sistema aborda uma parte específica para a resolução de problemas voltados para a Álgebra Linear, como sistemas de equações lineares, espaços vetoriais, transformações lineares, entre outros conteúdos e tais recursos facilitam no processo de resoluções de problemas.
 
-\subsection{Wolfram Alpha}
-\noindent Wolfram Alpha\footnote[2]{Wolfram Alpha \url{https://www.wolfram.com/}} é uma plataforma de conhecimento computacional desenvolvido pela Wolfram Research e é uma plataforma de serviços \textit{online} que responde às perguntas diretamente, mediante o processamento da resposta extraída de base de dados estruturado. O presente sistema realiza cálculos em diversas áreas como cálculo diferencial, processamento de imagens, finanças, Álgebra Linear, entre outros. Através do mesmo é possível obter a resolução problemas mostrando toda a descrição da resolução da expressão.
+O Matlab é um \textit{software} que usa a abordagem da computação simbólica, ao qual as operações realizadas demonstram os resultados exatamente e não aproximado, por exemplo, uma equação algébrica que apresenta várias variáveis para exemplificar a dependência funcional de uma dessas variáveis. Se $a$, $b$ e $x$ são variáveis simbólicas e a expressão algébrica é $ax-b = 0$, $x$ pode ser resolvido em termos de $a$ e $b$, o que resulta em $x = \frac{b}{a}$, agora realizando outro exemplo com a operação de adição tem que $\frac{x}{4}$ e $\frac{x}{3}$, o resultado é $\frac{7x}{12}$ e não $0,5833x$ \cite{2012:Amos}.
 
-Na Álgebra Linear, alguns assuntos são abordados para a resolução de problemas, tais como operações com matrizes, sistemas de equações lineares, matrizes de transformações, espaços vetoriais, etc. É importante ressaltar que não são todos os tópicos de sistemas de equações lineares, espaço vetorial e transformações lineares que estão presente na plataforma. 
+Para criação de objetos simbólicos utilizando o Matlab, basta usar o comando $sym$ ou $syms$ para criar múltiplos objetos. A figura \ref{objeto_simbolico} demonstra como é definido um objeto simbólico no \textit{software} em questão.
 
-\subsection{Maple}
-\noindent Maple\footnote[3]{Maple \url{https://www.maplesoft.com/}} é \textit{software} computacional específico para resolução de problemas matemáticos e constitui um ambiente computacional para o trabalho com expressões algébricas, simbólica e permite a geração de gráficos em até três dimensões. Seu desenvolvimento começou na Universidade de Waterloo no Canadá em 1981, mas em 1988 a empresa Maplesoft começou a desenvolver novas funcionalidades e a comercializá-lo. 
+\begin{figure}[!htb]
+  \centering 
+  \includegraphics[scale=1]{Figuras/objeto_simbolico.png}
+  \caption{Criação de objeto simbólico no Matlab \cite{2012:Amos}}
+  \label{objeto_simbolico}
+\end{figure}
 
-Com o Maple é possível resolver problemas de diversas áreas, entre elas a Álgebra Linear com a resolução de problemas ligados a sistemas de equações lineares, espaço vetorial, transformações lineares, entre muitos outros tópicos.
+O Matlab trabalha com os conteúdos da Álgebra Linear para a resolução de problemas, assim através do mesmo é possível encontrar a solução de sistemas de equações lineares, por exemplo, considerando o exemplo (I), a entrada e resolução no Matlab seria de acordo com o código a seguir:
 
-\section{Formalismo de linguagens}
-\noindent De um modo geral, linguagens formais consiste em modelos matemáticos que permite especificar e reconhecer linguagens, suas estruturas, propriedades e classificações. Em ciência da computação apresenta diversas aplicações tais como modelagem de sistemas, compiladores, processamento de linguagens, reconhecimento de padrões, item este que será de grande importância para o desenvolvimento da plataforma AlfaGebra, pois através do mesmo será possível verificar as expressões inseridas para o processamento do resultado. Contudo, para um melhor entendimento é necessário introduzir os conceitos de alfabeto e palavra.
+\begin{center}
+(I)
+    $\left\{\begin{matrix}
+        x_{1} + 2x_{2} + x_{3} = 8 \\ 
+        2x_{1} - x_{2} + x_{3} = 3 \\ 
+        -x_{1} + x_{2} - 2x_{3} = -5  
+    \end{matrix}\right.$
+    \label{equacao}
+\end{center}
 
-De acordo com Hopcroft \cite{2002:John}, um alfabeto é um conjunto de símbolos finito e não-vazio e palavra é uma sequência finita de símbolos de um alfabeto, e a partir de um conjunto palavras que são originadas as linguagens.
+Código Matlab, resolução sistemas de equações lineares:
 
-\subsection{Expressões Regulares}
-\noindent Expressões regulares é um notação para definição de padrões para linguagens, sua funcionalidade é para validar entradas de dados, ou seja, é um formalismo denotacional, considerado gerador, o qual é definido a partir de conjuntos de linguagens básicas e de operação de concatenação e de união.
+\begin{lstlisting}
+    A=[1 2 1; 2 -1 1; -1 1 -2]
+    A =
+        1   2   1
+        2   -1  1
+        -1  1   -2
+    b=[8;3;-5]
+    b =
+        8
+        3
+        -5
+    x = inv(A)*b ou x = A\b ou x = pinv(A)*b
+    //Mostrando o resultado
+    x =
+        1
+        2
+        3
+\end{lstlisting}
 
-As expressões regulares são utilizadas para construção de muitos \textit{softwares}, por exemplo, compiladores, editores, sistemas operacionais, protocolos, entre outras aplicações e elas são a maneira mais compacta e simples de descrever conjuntos regulares.
+Essa resolução não está em nível de computação simbólica, mas para resolução, basta somente utilizar o comando $sym$ para criar um objeto, como descrito na figura \ref{objeto_simbolico} e desenvolver a questão.
 
-\subsection{Autômato Finito}
-\noindent Autômato Finito consiste de um formalismo operacional ou reconhecedor, sendo um sistema de estados finitos, ou seja, é uma máquina de estados finito que aceita ou rejeita palavras. De acordo com \cite{2002:John}, 
-\begin{quote}
-    os autômatos finitos envolvem estados e transições entre estados em reposta a entradas. Eles são úteis na elaboração de vários tipos diferentes de \textit{software}, inclusive o componentes léxica de um compilador e sistemas para verificar correção de circuitos ou protocolos (p. 36).
-\end{quote}
-
-Assim como as expressões regulares os autômatos finitos propicia a formalização das linguagens regulares. Contudo, os autômatos finitos são dispositivos de aceitação de sentenças e constituem um caso particular do modelo geral de reconhecedores.
 
 \section{Metodologia de Desenvolvimento Ágil}
 \noindent Um ponto importante das metodologias ágeis é que elas são adaptativas, ou seja, elas podem ser adaptadas no decorrer do desenvolvimento de \textit{software} a novos fatores, o que é diferente das metodologias clássicas, a qual pode acontecer de no decorrer do desenvolvimento de um \textit{software} realizar todas as etapas necessárias para sua concretização e depois verificar que elas não atendem mais ao propósito que foi implementado. Isso porque as regras podem ter mudado e para a realização das adaptações pode ter um custo alto, desse modo, não sendo proveitoso desenvolvê-las. Foi a partir dessa situação que a crise do \textit{software} começou a crescer, visto que os \textit{software} não satisfaziam os clientes ou empresas \cite{2005:rezende}.
 
 \subsection{Manifesto Ágil}
-\noindent O manifesto ágil teve seu surgimento em 2001 pelo engenheiro de \textit{software} Kenet Beck e mais 16 (dezesseis) desenvolvedores de sistemas de grande destaques na área, a qual batizaram de \textit{``Agile Alliance"} e assinaram um documento conhecido com \textit{``Manifesto para Desenvolvimento Ágil de \textit{Software}"} como registro dessa prática de desenvolvimento \cite{2001:Pressman}.
+\noindent O manifesto ágil teve seu surgimento em 2001 pelo engenheiro de \textit{software} Kenet Beck\footnote[5]{Kenet Beck é um engenheiro de \textit{software}, responsável por criar o \textit{Extreme Programming e Test Driven Development (TDD)}} e mais 16 (dezesseis) desenvolvedores de sistemas de grande destaques na área, a qual batizaram de \textit{``Agile Alliance"} e assinaram um documento conhecido com \textit{``Manifesto para Desenvolvimento Ágil de \textit{Software}"} como registro dessa prática de desenvolvimento \cite{2001:Pressman}.
 
 Atualmente o processo de desenvolvimento de \textit{software} utilizando a metodologia ágil tem ganhado bastante espaços devido ao fato que Pereira \cite{2013:Pereira} relata:
 \begin{quote}
     os processos ágeis de desenvolvimento compartilham a premissa de que o cliente aprende sobre as suas necessidades, na medida em que é capaz de manipular o sistema que está sendo produzido e, com base no \textit{feedback} do sistema, ele reavalia as suas necessidades e prioridades, criando mudanças que devem ser incorporadas ao \textit{software} (\cite{2013:Pereira}, apud \cite{2004:Teles}, 2004). 
 \end{quote}
 
-\subsection{Metodologia \textit{Scrum}}
-\noindent Dentre as metodologias ágeis atualmente presentes no mercado, existe o \textit{Scrum}, esta criada em 1990 por Jeff Sutherland e sua equipe de desenvolvimento, mas somente na década seguinte que se tornou popular. Recentemente Scwaber Beedle foi o responsável por adicionar novas atualizações na metodologia \cite{2001:Pressman}. Tal metodologia aborda todos os princípios utilizados pelo o manifesto ágil, visando a orientação sobre o desenvolvimento de \textit{software} nas atividades de requisitos como levantamento e análise de requisitos, planejamento do projeto, evolução e entrega do produto são atendidos.
+\subsection{\textit{Framework Scrum}}
+\noindent Dentre as metodologias ágeis atualmente presentes no mercado, existe o \textit{ framework Scrum}, esta criada em 1990 por Jeff Sutherland e sua equipe de desenvolvimento, mas somente na década seguinte que se tornou popular. Recentemente Scwaber Beedle foi o responsável por adicionar novas atualizações na metodologia \cite{2001:Pressman}. Tal ferramenta aborda todos os princípios utilizados pelo o manifesto ágil, visando a orientação sobre o desenvolvimento de \textit{software} nas atividades de requisitos como levantamento e análise de requisitos, planejamento do projeto, evolução e entrega do produto são atendidos.
 
 O \textit{Scrum} funciona de acordo com seu ciclo de atividades como a figura \ref{chave_para_refencia_cruzada} é demonstrada.
 
