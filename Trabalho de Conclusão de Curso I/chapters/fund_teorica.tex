@@ -10,7 +10,7 @@
 \noindent Um das ferramentas mais poderosas consideradas na matemática são as matrizes, pois as mesmas tem aplicações em diversas áreas, tais como em codificação e decodificação de mensagens, computação gráfica, engenharias, etc. Desse modo, faz-se necessário a compreensão de algumas propriedades e nomenclaturas em relação as mesmas.
 
 \subsection{Definição de matriz}
-\noindent Matrizes são objetos matemáticos estruturados em tabelas disposta em $m$ linhas e $n$ colunas. A definição de Steinbruch \cite{1987:Steinbruch} é similar a citada, onde uma matriz é uma tabela $m x n$ de elementos, e que estes podem ser números, polinômios, funções, etc., que estão dispostos em $m$ linhas e $n$ colunas, representada por  $A{}_{mxn}$.\\
+\noindent Matrizes são objetos matemáticos estruturados em tabelas disposta em $m$ linhas e $n$ colunas. A definição de Steinbruch \cite{1987:Steinbruch} é similar a citada, onde uma matriz é uma tabela $m \times n$ de elementos, e que estes podem ser números, polinômios, funções, etc., que estão dispostos em $m$ linhas e $n$ colunas, representada por  $A{}_{m \times n}$.\\
 
 \begin{center}
     $A = 
@@ -20,12 +20,12 @@
         a_{31} & a_{32} & a_{33} & \ldots & a_{3n}\\ 
         \vdots & \vdots & \vdots & \ldots & \\ 
         a_{m1} & a_{m2} & a_{m3} & \ldots & a_{mn}
-    \end{bmatrix}_{mxn}$
+    \end{bmatrix}_{m \times n}$
 \end{center}
 
 %
 \subsection{Tipos de matrizes}
-\noindent Para Boldrini \cite{1980:Boldrini}, no processo de utilização de matrizes, percebe-se que existem algumas que são diferentes, seja pela quantitativo de linhas ou colunas, bem como também pela natureza de seus elementos, a qual apresentam propriedades que se diferenciam de uma matriz qualquer. A seguir, serão expostas as principais categorias de matrizes, para isso, considerando uma matriz com $m$ linhas e $n$ colunas representa por $A{}_{mxn}$.
+\noindent Para Boldrini \cite{1980:Boldrini}, no processo de utilização de matrizes, percebe-se que existem algumas que são diferentes, seja pela quantitativo de linhas ou colunas, bem como também pela natureza de seus elementos, a qual apresentam propriedades que se diferenciam de uma matriz qualquer. A seguir, serão expostas as principais categorias de matrizes, para isso, considerando uma matriz com $m$ linhas e $n$ colunas representa por $A{}_{m \times n}$.
 
 \subsubsection{Matriz Quadrada}
 \noindent Quando o número de linhas $m$ é igual ao número de coluna $n$ $(m = n)$.
@@ -37,7 +37,7 @@
         a_{11} & a_{12} & a_{13} \\ 
         a_{21} & a_{22} & a_{23} \\ 
         a_{31} & a_{32} & a_{33} 
-    \end{bmatrix}_{mxn}$
+    \end{bmatrix}_{m \times n}$
 \end{center}
 
 Observando a matriz $A$, percebe-se que o número de linhas e colunas são iguais, sendo $A{}_{3x3}$. Nesse tipo de matriz, em que a ordem é $n$ por $n$, costuma dizer que $A$ é uma matriz de ordem $n$.
@@ -50,7 +50,7 @@ Observando a matriz $A$, percebe-se que o número de linhas e colunas são iguai
     $A = 
     \begin{bmatrix}
         a_{1} & a_{2} & a_{3} & \ldots & a_{n}
-    \end{bmatrix}_{1 x n}$
+    \end{bmatrix}_{1 \times n}$
 \end{center}
 
 \subsubsection{Matriz Coluna}
@@ -65,7 +65,7 @@ Observando a matriz $A$, percebe-se que o número de linhas e colunas são iguai
         a_{3} \\
         \vdots \\
         a_{n} 
-    \end{bmatrix}_{n x 1}$
+    \end{bmatrix}_{n \times 1}$
 \end{center}
 
 \subsubsection{Matriz Nula}
@@ -401,9 +401,8 @@ Como as duas condições são satisfeitas, então o conjunto é um subespaço ve
 
 
 \section{Computação simbólica}
-\noindent A computação apresenta limitação no que tange a capacidade de armazenamento de dados, em virtude disso, nas operações de cálculos, os arredondamentos são aplicados e acabam afetando a precisão da resposta esperada. Mas, a computação simbólica apresenta uma diferencial neste quesito, pois na computação simbólica os dados são armazenados como frações e manipulados algebricamente, o que ocasiona a precisão da resposta total. Destarte, ela é bastante utilizada na matemática para manipular formas simbólicas de expressões matemáticas e para realizar cálculos numéricos que são utilizados em \textit{softwares} numéricos.
-
-Assim, a computação simbólica é um ramo da Ciência da Computação e Matemática que estuda as operações simbólicas que são tratadas por um computador, ou seja, o desenvolvimento de algoritmos para manipulação de expressões matemáticas e outros objetos matemáticos \cite{2005:Leandro}.
+\label{computacao_simbolica}
+\noindent A computação simbólica é um ramo da Ciência da Computação e Matemática que estuda as operações simbólicas que são tratadas por um computador, ou seja, o desenvolvimento de algoritmos para manipulação de expressões matemáticas e outros objetos matemáticos \cite{2005:Leandro}.
 
 Em sistemas de computação simbólica, Bortolossi \cite{2012:Humberto} descreve que são
 \begin{quote}
@@ -415,19 +414,32 @@ Já Campos \cite{2015:Lidio}, explana que é
     um interessante recurso de programação de alto nível, que integra os paradigmas de programação procedural, programação funcional e programação baseada em regras, que permite aos programadores especialistas produzirem aplicações que sistematicamente trabalham o desenvolvimento de cálculo analítico avançado (p. 4).  
 \end{quote}
 
-Muitas aplicações na matemática, ciências e engenharias requerem operações simbólicas na resolução de operações, a partir disso, nas últimas décadas, no que tange o desenvolvimento de \textit{software} para matemática, foram desenvolvidos vários sistemas entre alguns deles o Mathematica, Maple, Matlab, Mupad, entre outros que permitem a manipulação simbólica de expressões matemáticas, e assim possibilitando resultados exatos e dentre estes \textit{softwares} os que mais recebem destaque são o Maple e Mathematica, devido a sua capacidade de resolução \cite{2007:Valesca}. É importante salientar que todos esses sistemas trabalham com os conteúdos da Álgebra Linear e por conseguinte, utilizam a computação simbólica para resolução dos problemas.
+De acordo com Francisco \cite{1996:Francisco}, ``a computação simbólica surgiu da necessidade de se atribuir à máquina tarefas de manipular algebricamente extensas expressões matemáticas" (p. 7), e desde o seu surgimento, é bastante utilizada na matemática para manipular formas simbólicas de expressões matemáticas e para realizar cálculos numéricos, bem como também é utilizada em \textit{softwares} numéricos, como Matlab, Mathematica, Maple, entre outros.
+
+Muitas aplicações na matemática, ciências e engenharias requerem operações simbólicas na resolução de operações, a partir disso, nas últimas décadas, no que tange o desenvolvimento de \textit{software} para matemática, foram desenvolvidos vários sistemas entre alguns deles o Mathematica, Maple, Matlab, Mupad, entre outros que permitem a manipulação simbólica de expressões matemáticas, e assim possibilitando resultados exatos e dentre estes \textit{softwares} os que mais receberam destaques são o Maple e Mathematica, devido a sua capacidade de resolução \cite{2007:Valesca}. Atualmente a maioria dos sistemas de computação simbólica podem ser utilizados de maneira interativa, a qual o usuário entra com a expressão e assim o sistema o avalia e retorna a resposta.
+
+É importante salientar que todos esses sistemas trabalham com os conteúdos da Álgebra Linear e por conseguinte, utilizam a computação simbólica para resolução de problema.
+
+A utilização da computação simbólica é bastante aplicada para execução de operações aritméticas (multiplicação, divisão e potenciação), álgebra e cálculo avançado. Para compreensão do funcionamento dessa área que é bastante utilizada na matemática, faz-se necessário entender como seria a resposta em valores simbólicos e em valores numéricos, por exemplo, no valor $\frac{3}{9}$ em valor simbólico consistiria em $\frac{1}{3}$, mas já em numérico corresponderia $0,333333$. Outro exemplo seria, se $a$, $b$ e $x$ são variáveis simbólicas e a expressão algébrica é $ax-b = 0$, $x$ pode ser resolvido em termos de $a$ e $b$, o que resulta em $x = \frac{b}{a}$, agora realizando um outro exemplo com a operação de adição têm que $\frac{x}{4}$ e $\frac{x}{3}$, o resultado é $\frac{7x}{12}$ e não $0,5833x$ \cite{2012:Amos}. 
 
 \section{\textit{Software} matemático com abordagem em Álgebra Linear}
-\noindent Com o avanço das tecnologias muitos \textit{softwares} foram desenvolvidos com o propósito de auxiliar no aprendizado e na resoluções de problemas matemáticos, dentre alguns deles, o  Matlab\footnote[2]{Matlab \url{https://www.mathworks.com/products/matlab.html}} que é ambiente computacional para trabalho com expressões algébricas e simbólicas, o Maple\footnote[3]{Maple \url{https://www.maplesoft.com/}} também é outro \textit{software} computacional específico para resoluções de problemas matemáticos e constitui um ambiente computacional para o trabalho de expressões algébricas e simbólicas, outro é Mathematica\footnote[4]{Mathematica \url{https://www.wolfram.com/mathematica/}} que é um \textit{software} que trabalha com álgebra computacional e utiliza expressões algébricas e simbólicas para resolução, e foi desenvolvido pela Wolfram Research, entre alguns outros. Em virtude do Matlab ser um \textit{software} conhecido mundialmente e por ser uma ferramenta poderosa o mesmo será abordado com aspectos ligados à abordagem da Álgebra Linear.
+\noindent Com o avanço das tecnologias muitos \textit{softwares} foram desenvolvidos com o propósito de auxiliar nas resoluções de problemas matemáticos, dentre alguns deles, o  Matlab\footnote[2]{Matlab \url{https://www.mathworks.com/products/matlab.html}} que é ambiente computacional para trabalho com expressões algébricas e simbólicas, o Maple\footnote[3]{Maple \url{https://www.maplesoft.com/}} também é outro \textit{software} computacional específico para resoluções de problemas matemáticos e constitui um ambiente computacional para o trabalho de expressões algébricas e simbólicas, outro é Mathematica\footnote[4]{Mathematica \url{https://www.wolfram.com/mathematica/}} que é um \textit{software} que trabalha com álgebra computacional e utiliza expressões algébricas e simbólicas para resolução, e foi desenvolvido pela Wolfram Research, entre alguns outros. Em virtude do Matlab ser um \textit{software} conhecido mundialmente e por ser uma ferramenta poderosa o mesmo será abordado na seção \ref{matlab_alebra_linear} com descrição de como é utilizado para aplicação de conceitos voltados para a Álgebra Linear e com abordagem na computação simbólica, visto que o mesmo implementa resoluções de problemas usando a computação simbólica.
 
-\subsection{Matlab}
-\noindent Matlab é um \textit{software} poderoso, ``conhecido mundialmente como uma excelente ferramenta para soluções de problemas matemáticos, científicos e tecnológicos, que possui comandos muito próximos da forma como são escritas as expressões matemáticas"  (\cite{2005:Marcello}, 2005, p. 2). Sua aplicação é usada para resoluções de problemas em diversas áreas, tais como: processamento de imagens, animação, aprendizagem profunda, visão computacional, robótica, etc. \cite{2004:Wu}. Trata-se de um \textit{software} interativo de alta performance voltado para o cálculo numérico, desenvolvido no final dos anos de 1970 pelo o presidente do departamento de ciência da computação da Universidade do Novo México, Cleve Moler\footnote[1]{Cleve Moler é PhD pela Universidade de Stanford em Matemática, presidente e cofundador da MathWorks. Moler é matemático e cientista da computação, trabalha com Álgebra Linear numérica e desenvolveu \textit{software} Matlab \cite{2016:Raquel}.} \cite{2016:Raquel}.
+\subsection{Matlab e a Álgebra Linear}
+\label{matlab_alebra_linear}
+\noindent Matlab é um \textit{software} poderoso, ``conhecido mundialmente como uma excelente ferramenta para soluções de problemas matemáticos, científicos e tecnológicos, que possui comandos muito próximos da forma como são escritas as expressões matemáticas"  (\cite{2005:Marcello}, 2005, p. 2). Sua aplicação é usada para resoluções de problemas em diversas áreas, como: processamento de imagens, animação, aprendizagem profunda, visão computacional, robótica, etc. \cite{2004:Wu}. Trata-se de um \textit{software} interativo de alta performance voltado para o cálculo numérico, desenvolvido no final dos anos de 1970 pelo o presidente do departamento de ciência da computação da Universidade do Novo México, Cleve Moler\footnote[1]{Cleve Moler é PhD pela Universidade de Stanford em Matemática, presidente e cofundador da MathWorks. Moler é matemático e cientista da computação, trabalha com Álgebra Linear numérica e desenvolveu \textit{software} Matlab \cite{2016:Raquel}.} \cite{2016:Raquel}.
 
-Uma das principais características presente no Matlab é a sua extensibilidade, que permite que vários contribuintes interajam  para o enriquecimento do sistema, tais como engenheiros, programadores, matemáticos cientistas, entre outros \cite{2005:Marcello}. O sistema aborda uma parte específica para a resolução de problemas voltados para a Álgebra Linear, como sistemas de equações lineares, espaços vetoriais, transformações lineares, entre outros conteúdos e tais recursos facilitam no processo de resoluções de problemas.
+Uma das principais características presente no Matlab é a sua extensibilidade, que permite que vários contribuintes interajam  para o enriquecimento do sistema, tais como engenheiros, programadores, matemáticos cientistas, entre outros \cite{2005:Marcello}. O sistema aborda uma parte específica para a resoluções de problemas voltados para a Álgebra Linear, como sistemas de equações lineares, espaços vetoriais, transformações lineares, entre outros conteúdos.
 
-O Matlab é um \textit{software} que usa a abordagem da computação simbólica, ao qual as operações realizadas demonstram os resultados exatamente e não aproximado, por exemplo, uma equação algébrica que apresenta várias variáveis para exemplificar a dependência funcional de uma dessas variáveis. Se $a$, $b$ e $x$ são variáveis simbólicas e a expressão algébrica é $ax-b = 0$, $x$ pode ser resolvido em termos de $a$ e $b$, o que resulta em $x = \frac{b}{a}$, agora realizando outro exemplo com a operação de adição tem que $\frac{x}{4}$ e $\frac{x}{3}$, o resultado é $\frac{7x}{12}$ e não $0,5833x$ \cite{2012:Amos}.
+A seguir serão apresentadas exemplificações de como alguns conceitos da Álgebra Linear são aplicados no Matlab, mas antes de abordar sobre os conceitos é necessário entender uma abordagem da computação simbólica aplicada no presente \textit{software}.
 
-Para criação de objetos simbólicos utilizando o Matlab, basta usar o comando $sym$ ou $syms$ para criar múltiplos objetos. A figura \ref{objeto_simbolico} demonstra como é definido um objeto simbólico no \textit{software} em questão.
+\subsubsection{Matlab e computação simbólica}
+\label{matlab_computacao_simbolica}
+\noindent O Matlab é um \textit{software} que usa a abordagem da computação simbólica, ao qual as operações realizadas demonstram os resultados exatos e não aproximados, ou seja, no Matlab é possível manipular expressões matemática, sem que use números, assim realizando cálculos com símbolos matemáticos, por exemplo, uma equação algébrica que apresenta várias variáveis para exemplificar a dependência funcional de uma dessas variáveis. Na seção \ref{computacao_simbolica} é citado exemplos que explanam exemplos com abordagem na computação simbólica.
+
+A coleção de funções que o Matlab utiliza para manipular e resolver expressões simbólica é o \textit{toolbox}, que foram criadas através do \textit{software} Maple \cite{0000:Bernardo}. 
+
+Para realizar cálculos simbólicos no Matlab é definido um tipo de dados, designado por objeto simbólico, a qual o comando utilizado para criação de objeto é o $sym$ ou $syms$ para criar múltiplos objetos, a figura \ref{objeto_simbolico} apresenta com detalhes de como é definido um objeto simbólico. No presente código abaixo é apresentado a diferença entre a resolução de um problema usando a computação simbólica e o outro não, e vejamos como o tratamento do resultado final é expressado.
 
 \begin{figure}[!htb]
   \centering 
@@ -436,19 +448,34 @@ Para criação de objetos simbólicos utilizando o Matlab, basta usar o comando 
   \label{objeto_simbolico}
 \end{figure}
 
-O Matlab trabalha com os conteúdos da Álgebra Linear para a resolução de problemas, assim através do mesmo é possível encontrar a solução de sistemas de equações lineares, por exemplo, considerando o exemplo (I), a entrada e resolução no Matlab seria de acordo com o código a seguir:
+Código não simbólico:
+\begin{lstlisting}
+    a = sqrt(2)
+    a = 1.4142
+\end{lstlisting}
+
+Código simbólico:
+\begin{lstlisting}
+    b = sqrt(sym(2))
+    b = 2^(1/2)
+\end{lstlisting}
+
+Existem outros comandos para trabalhar com computação simbólica no Matlab, mas como foco dessa abordagem não é apresentar os recursos do Matlab e sim só uma abordagem superficial em relação a computação simbólica, eles não serão discutidos.
+
+\subsubsection{Matlab e sistemas de equações lineares}
+\label{matlab_equacao_lineares}
+\noindent O Matlab também trabalha com o conteúdo da Álgebra Linear de sistemas de equações lineares para a resoluções de problemas, no exemplo (I) é demonstrado como é realizado a resolução de um problema dessa abordagem.
 
 \begin{center}
-(I)
+Exemplo: (I)
     $\left\{\begin{matrix}
         x_{1} + 2x_{2} + x_{3} = 8 \\ 
         2x_{1} - x_{2} + x_{3} = 3 \\ 
         -x_{1} + x_{2} - 2x_{3} = -5  
     \end{matrix}\right.$
-    \label{equacao}
 \end{center}
 
-Código Matlab, resolução sistemas de equações lineares:
+O presente código do Matlab é apresentado de como ficaria o exemplo (I), sendo aplicado a resolução:
 
 \begin{lstlisting}
     A=[1 2 1; 2 -1 1; -1 1 -2]
@@ -471,67 +498,39 @@ Código Matlab, resolução sistemas de equações lineares:
 
 Essa resolução não está em nível de computação simbólica, mas para resolução, basta somente utilizar o comando $sym$ para criar um objeto, como descrito na figura \ref{objeto_simbolico} e desenvolver a questão.
 
+\subsubsection{Matlab e espaço vetorial}
+\label{matlab_espaco_vetorial}
+\noindent Um outro assunto de grande importância para Álgebra Linear são os espaços vetoriais e o sistema em questão, também realiza a resolução de problemas desse tipo. No exemplo a seguir é apresentado como é feito a resolução utilizando o Matlab.
 
-\section{Metodologia de Desenvolvimento Ágil}
-\noindent Um ponto importante das metodologias ágeis é que elas são adaptativas, ou seja, elas podem ser adaptadas no decorrer do desenvolvimento de \textit{software} a novos fatores, o que é diferente das metodologias clássicas, a qual pode acontecer de no decorrer do desenvolvimento de um \textit{software} realizar todas as etapas necessárias para sua concretização e depois verificar que elas não atendem mais ao propósito que foi implementado. Isso porque as regras podem ter mudado e para a realização das adaptações pode ter um custo alto, desse modo, não sendo proveitoso desenvolvê-las. Foi a partir dessa situação que a crise do \textit{software} começou a crescer, visto que os \textit{software} não satisfaziam os clientes ou empresas \cite{2005:rezende}.
+O Matlab apresenta integração com as funcionalidade do \textit{software} Mupad, isso ocorrer através do pacote de funções toolbox de computação simbólica, permitindo assim a resolução de problemas e entre alguns deles que podem ser resolvidos são os problemas de espaço vetorial. O código abaixo apresenta demonstração de uma resolução de espaço vetorial, ao qual são dados três vetores e assim encontrar a base do espaço vetorial.
 
-\subsection{Manifesto Ágil}
-\noindent O manifesto ágil teve seu surgimento em 2001 pelo engenheiro de \textit{software} Kenet Beck\footnote[5]{Kenet Beck é um engenheiro de \textit{software}, responsável por criar o \textit{Extreme Programming e Test Driven Development (TDD)}} e mais 16 (dezesseis) desenvolvedores de sistemas de grande destaques na área, a qual batizaram de \textit{``Agile Alliance"} e assinaram um documento conhecido com \textit{``Manifesto para Desenvolvimento Ágil de \textit{Software}"} como registro dessa prática de desenvolvimento \cite{2001:Pressman}.
+Esse presente código são definidos os domínios das matrizes
+\begin{lstlisting}
+    MatQ := Dom::Matrix(Dom::Rational):
+\end{lstlisting}
+E para realizar o cálculo de uma base para o espaço vetorial gerado pelos os vetores $\begin{pmatrix}
+3 \\
+-2
+\end{pmatrix}$, 
+$\begin{pmatrix}
+1 \\
+0
+\end{pmatrix}$ e 
+$\begin{pmatrix}
+5 \\
+-3
+\end{pmatrix}$
 
-Atualmente o processo de desenvolvimento de \textit{software} utilizando a metodologia ágil tem ganhado bastante espaços devido ao fato que Pereira \cite{2013:Pereira} relata:
-\begin{quote}
-    os processos ágeis de desenvolvimento compartilham a premissa de que o cliente aprende sobre as suas necessidades, na medida em que é capaz de manipular o sistema que está sendo produzido e, com base no \textit{feedback} do sistema, ele reavalia as suas necessidades e prioridades, criando mudanças que devem ser incorporadas ao \textit{software} (\cite{2013:Pereira}, apud \cite{2004:Teles}, 2004). 
-\end{quote}
+Assim o código será executado e demostrado o resultado: 
 
-\subsection{\textit{Framework Scrum}}
-\noindent Dentre as metodologias ágeis atualmente presentes no mercado, existe o \textit{ framework Scrum}, esta criada em 1990 por Jeff Sutherland e sua equipe de desenvolvimento, mas somente na década seguinte que se tornou popular. Recentemente Scwaber Beedle foi o responsável por adicionar novas atualizações na metodologia \cite{2001:Pressman}. Tal ferramenta aborda todos os princípios utilizados pelo o manifesto ágil, visando a orientação sobre o desenvolvimento de \textit{software} nas atividades de requisitos como levantamento e análise de requisitos, planejamento do projeto, evolução e entrega do produto são atendidos.
+\begin{lstlisting}
+    v1: = MatQ ([3, -2]): 
+    v2: = MatQ ([1, 0]): 
+    v3: = MatQ ([5, -3]): 
+    linalg :: basis ([v1, v2, v3] )
+\end{lstlisting}
 
-O \textit{Scrum} funciona de acordo com seu ciclo de atividades como a figura \ref{chave_para_refencia_cruzada} é demonstrada.
-
-\begin{figure}[!hb]
-  \centering 
-  \includegraphics[scale=1.8]{Figuras/ciclo_scrum.png}
-  \caption{Ciclo de atividades da metodologia \textit{Scrum}. Adaptado de \cite{0000:rafael}}
-  \label{chave_para_refencia_cruzada}
-\end{figure}
-
-No decorrer do desenvolvimento vários termos são utilizados para descrever cada etapa, tais como \textit{Product Backlog, Sprint Backlog, Daily Scrum Meeting, Sprint Review Meeting,} entre outras. Adiante serão expostas cada uma com sua importância e significado dentro da metodologia.
-
-\subsubsection{\textit{Product Backlog}}
-\noindent O \textit{Product Backlog} consiste em uma lista que nela estarão elencadas tudo que acredita que será produzida ao longo do projeto e os itens presentes nela serão desenvolvidas pelo \textit{Scrum Team}, ou seja, a equipe de desenvolvimento e essa é a única fonte de trabalho que a equipe realiza. E é nela que irão conter todas a necessidades e objetivos de negócio do cliente e as partes interessadas do projeto \cite{0000:rafael}. Essa lista é categorizada com níveis de prioridades e essas prioridades são estabelecidas pelo \textit{Product Owner}.
-
-A figura \ref{chave_para_refencia_cruzada} demonstra como é estruturada a lista de \textit{Product Backlog}, sendo organizada por prioridades. 
-
-\begin{figure}[!htb]
-  \centering 
-  \includegraphics[scale=1.2]{Figuras/product_backlogs.png}
-  \caption{Estrutura de um \textit{Product Backlog}. Adaptado de \cite{0000:rafael}}
-  \label{chave_para_refencia_cruzada}
-\end{figure}
-
-\subsubsection{\textit{Sprint Backlog}}
-\noindent Uma \textit{Sprint} de acordo com Kotonya \cite{1997:Kotonya} consiste em um planejamento que visa avaliar a situação do trabalho, os recursos alocados para o desenvolvimento são selecionados e o \textit{software} é implementado. Desse modo, ela é basicamente uma lista que o time de desenvolvimento se compromete a realizar as tarefas presentes. Uma \textit{Sprint} é criada no primeiro evento realizado no ciclo, que é a \textit{Sprint Planning}. Durante a \textit{Sprint} a equipe de desenvolvimento verifica o quadro e solicita a tarefa que acredita que irá conseguir desenvolver e levando em consideração as prioridades de cada.
-
-A figura \ref{chave_para_refencia_cruzada} demonstra a estruturação de um quadro de \textit{Sprint}, sendo que é dividido em tarefas que tem para fazer, as que estão em desenvolvimento e as que já estão feitas.
-
-\begin{figure}[!htb]
-  \centering 
-  \includegraphics[scale=1.5]{Figuras/sprint_backlog.png}
-  \caption{Quadro de tarefas de uma \textit{Sprint Backlog}. Adaptado de \cite{0000:rafael}}
-  \label{chave_para_refencia_cruzada}
-\end{figure}
-
-\subsubsection{\textit{Daily Scrum Meeting}}
-\noindent Todos os dias que os \textit{Sprints} são realizadas a equipe de desenvolvedores, \textit{Product  Owner},\textit{Scrum Master} e outras pessoas, sendo que estas só poderão escutar, participarão de uma reunião que apresenta como objetivo disseminar conhecimentos sobre o que foi realizado no dia anterior e assim conseguir identificar problemas que estão atrapalhando o desenvolvimento e nela são priorizados o trabalho que será realizado no dia.
-
-\subsubsection{\textit{Sprint Review Meeting}}
-\noindent Assim como antes de iniciar um \textit{Sprint} é realizado uma reunião para disseminação das informações, no final de cada \textit{Sprint} é realizado também uma reunião que essa apresenta como objetivo de demonstrar o que foi desenvolvido durante o dia, a qual nela participarão toda a equipe, como o \textit{Product Owner, Scrum Team, Scrum Master}, gerência, clientes e engenheiros.
-
-\subsubsection{\textit{Product Owner}}
-\noindent Esse é um dos principais personagens da metodologia \textit{Scrum}, pois ele é o responsável por garantir e maximizar o trabalho da equipe, sendo ele que define os itens que irão compor o \textit{Product Baclog}. A partir do momento em que a equipe compromete-se em desenvolver as atividades no \textit{Sprint} ele se compromete a não trazer novos requisitos para \textit{Scrum Team}.
-
-\subsubsection{\textit{Scrum Master}}
-\noindent O \textit{Scrum Master} apresenta como função dentro da metodologia de assegurar que a equipe respeite e siga os valores e práticas do \textit{Scrum}, bem como também é o responsável por resolver qualquer impedimento que venha surgir no decorrer da \textit{Sprint}.
+Todos os problemas relacionados a sistemas de equações lineares e espaços vetoriais apresentados no decorrer do texto acima demonstra que com o auxilio do \textit{software} em questão pode auxiliar na resolução de questões e além desses conteúdos outros também podem ser resolvidos, tais como transformações lineares. Contudo, a resolução dos problemas não são didáticas, apenas para demonstrar os resultados, visto que no decorrer a resolução dos problemas não apresenta passo a passo, desse modo, no que tange em aspectos didáticos a ferramenta apresenta limitações, mas o foco dessa ferramenta não é ser didático e sim somente o resultado final do problema fornecido. Mas, essa abordagem foi realizada com objetivo de apresentar um sistema que expõe a resolução de problemas envolvendo os conteúdos da Álgebra Linear e assim apresentar que o \textit{software} que está sendo desenvolvido neste trabalho apresenta vantagens em relação ao Matlab devido essa questão.
 
 \section{Avaliação da aprendizagem}
 \noindent A prática de avaliar o aprendizado está presente em todos os momentos da vida acadêmica de um estudante, visto que essa prática faz parte dos objetivos das escolas. E a avaliação de acordo Libâneo \cite{1990:libaneo} não se restringe somente ao processo de realizar provas e atribuir notas, ela é bem mais complexa, pois tem o papel de cumprir as funções pedagógicas-didáticas que se refere ao papel da avaliação seguindo os objetivos gerais e específicos da educação escola, de diagnóstico e de controle em relação aos níveis de rendimento escolar. E esta é uma tarefa necessária e permeante do trabalho do docente. Desse modo, o autor a define como sendo uma reflexão sobre as condições de qualidade do trabalho dos dois personagens principais da academia, os professores e os alunos.

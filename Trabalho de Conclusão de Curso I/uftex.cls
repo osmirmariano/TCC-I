@@ -342,7 +342,8 @@ xrightmargin=10pt
   \end{minipage}\par
  \end{flushright}
   \vfill
-  \noindent \par Comissão Julgadora:\par
+  
+  %\noindent \par Comissão Julgadora:\par
      \begin{center}
   \begin{flushright}
         \count1=0

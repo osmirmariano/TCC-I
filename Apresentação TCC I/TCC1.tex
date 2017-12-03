@@ -1,0 +1,259 @@
+\documentclass{beamer}
+
+\mode<presentation>{
+\usetheme{Dresden}
+\setbeamercovered{transparent}
+\usecolortheme{lsc}
+}
+
+\mode<handout>{
+  % tema simples para ser impresso
+  \usepackage[bar]{beamerthemetree}
+  % Colocando um fundo cinza quando for gerar transparências para serem impressas
+  % mais de uma transparência por página
+  \beamertemplatesolidbackgroundcolor{black!5}
+}
+
+\usepackage{amsmath,amssymb}
+\usepackage[brazil]{varioref}
+\usepackage[english,brazil]{babel}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{url}
+\usepackage{colortbl}
+
+\beamertemplatetransparentcovereddynamic
+
+\title[Avaliação do aprendizado dos acadêmicos da disciplina de Álgebra Linear utilizando o software AlfaGebra... \hspace{4em} \insertframenumber/\inserttotalframenumber]{Avaliação do aprendizado dos acadêmicos da disciplina de Álgebra Linear utilizando o \textit{software} AlfaGebra - módulos sistemas de equações lineares e espaço vetorial}
+\author[Osmir Custódio Mariano]{%
+  Osmir Custódio Mariano \\
+  Orientadora: Drª. Hellena Christina Fernandes Apolinário\\
+  Coorientador: Dr. Edeilson Milhomem da Silva}
+  \institute[UFT]{
+     Ciência da Computação\\
+     Universidade Federal de Tocantins}
+
+
+% Se comentar a linha abaixo, irá aparecer a data quando foi compilada a apresentação  
+\date{30 de novembro de 2017}
+
+\pgfdeclareimage[height=1cm]{inf}{img/CienciaDaComputacao.png}
+
+% pode-se colocar o LOGO assim
+\logo{\pgfuseimage{inf}}
+
+%Gera em cada fim um novo sumário
+%\AtBeginSection[]{
+%  \begin{frame}<beamer>
+%    \frametitle{Sumário}
+%    \tableofcontents[currentsection,currentsubsection]
+%  \end{frame}
+%}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle[allowframebreaks]{Sumário}
+\begin{small}
+\tableofcontents
+\end{small}
+\end{frame}
+
+
+\section{Introdução}
+\frame{
+    \frametitle{Introdução}
+      \begin{itemize}
+        \item Importância da Álgebra Linear;
+        \begin{itemize}
+            \item Disciplina de Álgebra Linear.
+        \end{itemize}
+	    \item Aplicação na Computação Gráfica;
+	    \item Álgebra Linear no curso de Ciência da Computação na UFT.
+      \end{itemize}
+}
+
+\section{Justificativa}
+\frame{
+    \frametitle{Justificativa}
+      \begin{itemize}
+        \item Ferramentas tecnológicas;
+	    \item Instituições de ensino;
+	    \item Dificuldade na Álgebra Linear;
+	        \begin{itemize}
+	            \item Pesquisas sobre dificuldade da Álgebra Linear (Celestino, 2000).
+	        \end{itemize}
+	    \item Ferramenta computacional para auxiliar no ensino e aprendizagem?
+      \end{itemize}
+}
+
+\section{Objetivos}
+\frame{
+    \frametitle{Objetivo Geral}
+      Desenvolver a plataforma de ensino e aprendizagem AlfaGebra e avaliar o aprendizado dos acadêmicos da disciplina de Álgebra Linear do curso de Ciência da Computação da UFT.
+}
+
+\frame{
+    \frametitle{Objetivos Específicos}
+        \begin{itemize}
+            \item Desenvolver os módulos de sistemas de equações lineares e espaço vetorial da plataforma AlfaGebra em versão \textit{desktop} para o sistema operacional Windows;
+            \item Comparar o nível de aprendizado dos acadêmicos da disciplina de Álgebra Linear com e sem a utilização do \textit{software} AlfaGebra;
+        \end{itemize}
+}
+
+
+%\section{Conceitos propostos}
+%\frame{
+%    \frametitle{Conceitos propostos AlfaGebra}
+%        \begin{itemize}
+%            \item Computação simbólica
+%            \begin{itemize}
+%                \item O que é?;
+%                \item Utilização para execução de operações aritméticas;
+%                \item Matlab, Mathematica, etc.
+%            \end{itemize}
+%            \item Matlab e Álgebra Linear
+%        \end{itemize}
+%}
+
+\section{Metodologia}
+\frame{
+    \frametitle{Pesquisa}
+     \begin{itemize}
+	    \item Pesquisa-ação
+	    \begin{itemize}
+	        \item Pesquisa em campo;
+	        \item Aplicação de questionários.
+	    \end{itemize}
+    \end{itemize}
+}
+\frame{
+    \frametitle{Primeiro momento da avaliação}
+     \begin{itemize}
+	    \item Avaliação de aprendizagem sem o uso do AlfaGebra.
+	    \begin{itemize}
+	        \item Aplicação de questionário.
+	    \end{itemize}
+    \end{itemize}
+}
+\frame{
+    \frametitle{Desenvolvimento do \textit{software} AlfaGebra}
+     \begin{itemize}
+	    \item Identificação e especificação de conceitos para a plataforma;
+	    \begin{itemize}
+	        \item Conteúdos abordados no sistema;
+	        \item Especificação de requisitos;
+	        \item Prototipagem das telas.
+	    \end{itemize}
+	    \item Entendimento de como os conceitos são implementados;
+	    \item Implementação dos conceitos da Álgebra Linear definidos;
+	    \begin{itemize}
+	        \item Codificação do sistema.
+	    \end{itemize}
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Desenvolvimento do \textit{software} AlfaGebra}
+     \begin{itemize}
+	    \input{./includes/include-img/fluxo.tex}
+    \end{itemize}
+}
+\frame{
+    \frametitle{Segundo momento da avaliação}
+     \begin{itemize}
+	    \item Avaliação de aprendizagem com a utilização do AlfaGebra;
+	    \item Análise comparativa dos resultados obtidos pelos alunos com e sem a ferramenta.
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Ferramentas e materiais}
+        \begin{itemize}
+    	    \item Java SE;
+    	    \item JavaFx \textit{Sciene Builder};
+    	    \item IDE Netbeans, etc.
+    	    \item Metodologia de desenvolvimento ágil
+    	    \begin{itemize}
+    	        \item \textit{Scrum}
+    	    \end{itemize}
+    \end{itemize}
+}
+
+\section{Resultados preliminares}
+\frame{
+    \frametitle{Resultados Preliminares: primeiro momento da avaliação}
+        \input{./includes/include-tab/dadosAlunos.tex}
+        \begin{itemize}
+    	    \item 51,37\% de evasões
+        \end{itemize}
+}
+\frame[allowframebreaks]{
+    \frametitle{Coleta de dados}
+        \begin{itemize}
+    	    \item Grau de dificuldade da disciplina de Álgebra Linear;
+    	    \input{./includes/include-img/grauDificuldade.tex}
+            \item 40,90\% alto, 50\% médio e 9,10\% razoável.
+            
+            \item Frequência procuram o professor para sanar dúvidas;
+            \input{./includes/include-img/frequencia.tex}
+            \item 4,54\% frequente, 36,36\% às vezes e 54,54\% nunca.
+            
+            \item Utilização de tecnologia para estudo
+            \input{./includes/include-img/tecnologia.tex}     
+            \item 81,81\% usariam e 18,10\% indecisos.
+        \end{itemize}
+}
+
+
+
+\section{Conclusões}
+\frame{
+    \frametitle{Conclusões}
+        \begin{itemize}
+    	    \item Dificuldade da disciplina de Álgebra Linear;
+    	    \item Recursos tecnológicos para o ensino e aprendizagem;
+    	    \item Contribuição AlfaGebra.
+        \end{itemize}
+}
+
+\frame{
+    \frametitle{Continuação do trabalho}
+        \begin{itemize}
+    	    \item Conclusão do desenvolvimento do \textit{software} AlfaGebra;
+    	    \item Disponibilidade do \textit{software};
+    	    \item Aplicação de questionários;
+    	    \item Identificar na melhora do aprendizado com o AlfaGebra;
+    	    \item Análise dos resultados.
+        \end{itemize}
+}
+
+
+\section{Referências}
+\frame[allowframebreaks]{
+    \frametitle{Referências}
+  
+    \bibliographystyle{sbc}%apalike
+    \bibliography{tcc1}
+    
+    \nocite{2011:Furtado}
+    \nocite{2000:lima}
+    \nocite{2000:celestino}
+   
+}
+
+
+
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\end{document}
